@@ -1,25 +1,26 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { AppIcon } from "@/components/AppIcon";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 const FILTERS = ["Tất cả", "App", "Tool", "Bot", "Workflow", "Plugin"];
 
 const PROJECTS = [
-  { id: 1, name: "DevLog AI", desc: "Tự động tổng hợp nhật ký commit thành changelog có thể đọc được bằng tiếng Việt.", author: "@nguyenviet", skill: "git-summarizer", category: "Tool", stars: 342, color: "#7AA2F7", emoji: "📋" },
-  { id: 2, name: "CodeReview Bot", desc: "Bot Telegram nhận PR link và trả về code review chi tiết trong 10 giây.", author: "@tranbao", skill: "code-reviewer", category: "Bot", stars: 289, color: "#9ECE6A", emoji: "🤖" },
-  { id: 3, name: "SQL Whisperer", desc: "Chuyển câu hỏi tiếng Việt thành SQL query tối ưu, hỗ trợ PostgreSQL và MySQL.", author: "@lehoang", skill: "sql-gen", category: "Tool", stars: 215, color: "#E0AF68", emoji: "🗄️" },
-  { id: 4, name: "Notion AI Sync", desc: "Đồng bộ ghi chú Notion với AuRen context — AuRen nhớ mọi thứ bạn đã ghi.", author: "@phamthanh", skill: "notion-bridge", category: "Workflow", stars: 198, color: "#BB9AF7", emoji: "📝" },
-  { id: 5, name: "UX Critic", desc: "Upload ảnh màn hình và nhận phân tích UX chuyên nghiệp kèm gợi ý cải thiện.", author: "@dothuy", skill: "vision-analyst", category: "App", stars: 176, color: "#F7768E", emoji: "🎨" },
-  { id: 6, name: "StandupBot", desc: "Gửi standup report tự động lên Slack vào 9h sáng mỗi ngày từ task list của bạn.", author: "@vuonganh", skill: "scheduler + slack", category: "Bot", stars: 154, color: "#9ECE6A", emoji: "☀️" },
-  { id: 7, name: "DocWriter", desc: "Tạo README và JSDoc đầy đủ cho toàn bộ codebase chỉ với một lệnh.", author: "@hoangminh", skill: "doc-gen", category: "Tool", stars: 143, color: "#7AA2F7", emoji: "📖" },
-  { id: 8, name: "DataDive", desc: "Upload CSV và trò chuyện với dữ liệu bằng tiếng Việt. Xuất chart PNG ngay lập tức.", author: "@ngoctram", skill: "data-analyst", category: "App", stars: 128, color: "#E0AF68", emoji: "📊" },
+  { id: 1, name: "DevLog AI", desc: "Tự động tổng hợp nhật ký commit thành changelog có thể đọc được bằng tiếng Việt.", author: "@nguyenviet", skill: "git-summarizer", category: "Tool", stars: 342, color: "#7AA2F7", emoji: "changelog" },
+  { id: 2, name: "CodeReview Bot", desc: "Bot Telegram nhận PR link và trả về code review chi tiết trong 10 giây.", author: "@tranbao", skill: "code-reviewer", category: "Bot", stars: 289, color: "#9ECE6A", emoji: "portal" },
+  { id: 3, name: "SQL Whisperer", desc: "Chuyển câu hỏi tiếng Việt thành SQL query tối ưu, hỗ trợ PostgreSQL và MySQL.", author: "@lehoang", skill: "sql-gen", category: "Tool", stars: 215, color: "#E0AF68", emoji: "database" },
+  { id: 4, name: "Notion AI Sync", desc: "Đồng bộ ghi chú Notion với AuRen context — AuRen nhớ mọi thứ bạn đã ghi.", author: "@phamthanh", skill: "notion-bridge", category: "Workflow", stars: 198, color: "#BB9AF7", emoji: "edit" },
+  { id: 5, name: "UX Critic", desc: "Upload ảnh màn hình và nhận phân tích UX chuyên nghiệp kèm gợi ý cải thiện.", author: "@dothuy", skill: "vision-analyst", category: "App", stars: 176, color: "#F7768E", emoji: "image" },
+  { id: 6, name: "StandupBot", desc: "Gửi standup report tự động lên Slack vào 9h sáng mỗi ngày từ task list của bạn.", author: "@vuonganh", skill: "scheduler + slack", category: "Bot", stars: 154, color: "#9ECE6A", emoji: "cloud" },
+  { id: 7, name: "DocWriter", desc: "Tạo README và JSDoc đầy đủ cho toàn bộ codebase chỉ với một lệnh.", author: "@hoangminh", skill: "doc-gen", category: "Tool", stars: 143, color: "#7AA2F7", emoji: "docs" },
+  { id: 8, name: "DataDive", desc: "Upload CSV và trò chuyện với dữ liệu bằng tiếng Việt. Xuất chart PNG ngay lập tức.", author: "@ngoctram", skill: "data-analyst", category: "App", stars: 128, color: "#E0AF68", emoji: "chart" },
 ];
 
 export default function ShowcasePage() {
@@ -61,7 +62,7 @@ export default function ShowcasePage() {
               style={{ background: CARD, border: `1px solid ${BORDER}`, borderRadius: 14, padding: 20, cursor: "pointer" }}>
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 12 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 12, backgroundColor: `${p.color}18`, border: `1px solid ${p.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>
-                  {p.emoji}
+                  <AppIcon name={p.emoji} color={p.color} size={22} />
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 11, color: DIM2 }}>
                   <span style={{ fontSize: 13 }}>⭐</span> {p.stars}
