@@ -1,4 +1,5 @@
 import { useState, type ReactElement } from "react";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 
@@ -144,6 +145,7 @@ const BADGE_COLORS: Record<string, { bg: string; text: string }> = {
   Rising:    { bg: "rgba(99,102,241,0.1)",  text: "#818cf8" },
   Stable:    { bg: "rgba(107,114,128,0.12)",text: "#9ca3af" },
   Enterprise:{ bg: "rgba(59,130,246,0.1)",  text: "#60a5fa" },
+    </ViewTransition>
   Essential: { bg: "rgba(239,68,68,0.1)",   text: "#f87171" },
 };
 
@@ -163,7 +165,8 @@ export default function ToolsPage() {
   const totalTools = TOOL_CATEGORIES.reduce((s, c) => s + c.tools.length, 0);
 
   return (
-    <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
+    <ViewTransition default="none" enter="fade-in">
+      <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
       <style>{`
         .tool-card:hover{border-color:rgba(0,207,171,0.3)!important;background:rgba(0,207,171,0.04)!important;transform:translateY(-2px)}
         .tool-card{transition:all 0.15s ease;cursor:pointer}
@@ -288,6 +291,7 @@ export default function ToolsPage() {
       </div>
 
       <MobileNav active="tools" />
-    </div>
+      </div>
+    </ViewTransition>
   );
 }
