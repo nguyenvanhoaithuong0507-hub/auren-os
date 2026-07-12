@@ -3,17 +3,18 @@ import { useLocation } from "wouter";
 import Navbar from "@/components/Navbar";
 import { SKILLS, PLUGINS, SUGGESTION_PILLS } from "@/data/catalog";
 import { AuRenMascot, AuRenMark } from "@/components/AuRenMascot";
+import { AppIcon } from "@/components/AppIcon";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
-const CARD2 = "#13131a";
+const BG = "#0f0f0f";
+const CARD = "#161616";
+const CARD2 = "#262626";
 const BORDER = "rgba(255,255,255,0.06)";
 const BORDER2 = "rgba(255,255,255,0.09)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM = "#2c2d32";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM = "#262626";
+const DIM2 = "#6f6f6f";
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -34,13 +35,13 @@ function SkillCard({ skill, onClick }: { skill: typeof SKILLS[0]; onClick: () =>
         width: 200, flexShrink: 0, padding: "18px 16px",
         backgroundColor: hovered ? CARD2 : CARD,
         border: `1px solid ${hovered ? BORDER2 : BORDER}`,
-        borderRadius: 14, cursor: "pointer",
+        borderRadius: 3, cursor: "pointer",
         transition: "all 0.15s ease",
         transform: hovered ? "translateY(-3px)" : "none",
       }}>
       {/* Icon */}
-      <div style={{ width: 44, height: 44, borderRadius: 10, backgroundColor: skill.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12, border: `1px solid ${skill.color}20` }}>
-        {skill.icon}
+      <div style={{ width: 44, height: 44, borderRadius: 3, backgroundColor: skill.color + "18", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 12, border: `1px solid ${skill.color}35`, boxShadow: `inset 0 0 0 1px rgba(255,255,255,0.03)` }}>
+        <AppIcon name={skill.iconName ?? "tool"} color={skill.color} size={22} />
       </div>
       {/* Name */}
       <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 6, lineHeight: 1.3 }}>{skill.name}</div>
@@ -67,12 +68,12 @@ function PluginCard({ plugin }: { plugin: typeof PLUGINS[0] }) {
         width: 180, flexShrink: 0, padding: "16px 14px",
         backgroundColor: hovered ? CARD2 : CARD,
         border: `1px solid ${hovered ? BORDER2 : BORDER}`,
-        borderRadius: 12, cursor: "pointer",
+        borderRadius: 3, cursor: "pointer",
         transition: "all 0.15s ease",
         transform: hovered ? "translateY(-3px)" : "none",
       }}>
-      <div style={{ width: 38, height: 38, borderRadius: 9, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, marginBottom: 10, border: `1px solid ${plugin.color}20` }}>
-        {plugin.icon}
+      <div style={{ width: 38, height: 38, borderRadius: 3, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10, border: `1px solid ${plugin.color}35` }}>
+        <AppIcon name={plugin.iconName ?? "plugins"} color={plugin.color} size={19} />
       </div>
       <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 5 }}>{plugin.name}</div>
       <p style={{ fontSize: 11, color: MUTED, lineHeight: 1.5, marginBottom: 10, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{plugin.desc}</p>
@@ -114,7 +115,7 @@ export default function HomePage() {
       <style>{`
         *{box-sizing:border-box}
         input{outline:none}
-        input::placeholder{color:#3a4155}
+        input::placeholder{color:#6f6f6f}
         @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
         @keyframes glow{0%,100%{filter:drop-shadow(0 0 12px rgba(0,207,171,0.3))}50%{filter:drop-shadow(0 0 24px rgba(0,207,171,0.6))}}
         ::-webkit-scrollbar{display:none}
@@ -148,7 +149,7 @@ export default function HomePage() {
         </p>
 
         {/* Big search bar */}
-        <div style={{ maxWidth: 540, margin: "0 auto 16px", display: "flex", borderRadius: 12, overflow: "hidden", border: `1.5px solid ${ACCENT}40`, backgroundColor: CARD }}>
+        <div style={{ maxWidth: 540, margin: "0 auto 16px", display: "flex", borderRadius: 3, overflow: "hidden", border: `1.5px solid ${ACCENT}40`, backgroundColor: CARD }}>
           <div style={{ flex: 1, display: "flex", alignItems: "center", padding: "0 16px" }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={DIM2} strokeWidth="2" style={{ flexShrink: 0, marginRight: 10 }}><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             <input
@@ -167,7 +168,7 @@ export default function HomePage() {
         <div style={{ display: "flex", flexWrap: "wrap", gap: 7, justifyContent: "center", maxWidth: 480, margin: "0 auto" }}>
           {SUGGESTION_PILLS.map(pill => (
             <button key={pill} className="pill-tag" onClick={() => setSearch(pill)}
-              style={{ padding: "5px 12px", borderRadius: 20, border: `1px solid ${BORDER2}`, backgroundColor: "transparent", color: MUTED, fontSize: 12, cursor: "pointer", transition: "all 0.15s" }}>
+              style={{ padding: "5px 12px", borderRadius: 2, border: `1px solid ${BORDER2}`, backgroundColor: "transparent", color: MUTED, fontSize: 12, cursor: "pointer", transition: "all 0.15s" }}>
               {pill}
             </button>
           ))}
@@ -226,9 +227,9 @@ export default function HomePage() {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
           {morePlugins.map(plugin => (
-            <div key={plugin.id} style={{ padding: "14px", backgroundColor: CARD, border: `1px solid ${BORDER}`, borderRadius: 10, display: "flex", gap: 10, alignItems: "center", cursor: "pointer" }}>
-              <div style={{ width: 34, height: 34, borderRadius: 8, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0 }}>
-                {plugin.icon}
+            <div key={plugin.id} style={{ padding: "14px", backgroundColor: CARD, border: `1px solid ${BORDER}`, borderRadius: 3, display: "flex", gap: 10, alignItems: "center", cursor: "pointer" }}>
+              <div style={{ width: 34, height: 34, borderRadius: 3, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <AppIcon name={plugin.iconName ?? "plugins"} color={plugin.color} size={17} />
               </div>
               <div>
                 <div style={{ fontSize: 12, fontWeight: 600, color: TEXT, marginBottom: 2 }}>{plugin.name}</div>
