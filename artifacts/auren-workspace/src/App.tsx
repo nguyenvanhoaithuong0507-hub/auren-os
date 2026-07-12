@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Switch, Route, Router as WouterRouter, Redirect, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
 import { ClerkProvider, SignIn, SignUp, Show, useClerk } from "@clerk/react";
-import { publishableKeyFromHost } from "@clerk/react/internal";
 import { shadcn } from "@clerk/themes";
 import LandingPage from "@/pages/landing";
 import WorkspacePage from "@/pages/workspace";
@@ -15,14 +14,8 @@ import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
-// Try to get Clerk publishable key from environment or derive from host
-const clerkPubKey = 
-  import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || 
-  publishableKeyFromHost(
-    window.location.hostname,
-    import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
-  );
-
+// Only use Clerk if explicitly configured via environment variables
+const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || null;
 const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL || undefined;
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -34,12 +27,12 @@ function stripBase(path: string): string {
 }
 
 // Only throw error if we're in a production environment
-if (!clerkPubKey && import.meta.env.PROD) {
+if (clerkPubKey === null && import.meta.env.PROD) {
   throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY in production");
 }
 
-if (!clerkPubKey) {
-  console.warn("[v0] Clerk is not configured. Using fallback configuration for development.");
+if (clerkPubKey === null) {
+  console.warn("[v0] Clerk is not configured. Using fallback routing for development.");
 }
 
 const BG = "#0d0e14";
@@ -208,7 +201,7 @@ function AppRoutes() {
 function ClerkProviderWithRoutes() {
   const [, setLocation] = useLocation();
 
-  if (!clerkPubKey) {
+  if (clerkPubKey === null) {
     // Fallback for development without Clerk configuration
     return (
       <QueryClientProvider client={queryClient}>
