@@ -15,12 +15,15 @@ import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
-const clerkPubKey = publishableKeyFromHost(
-  window.location.hostname,
-  import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
-);
+// Try to get Clerk publishable key from environment or derive from host
+const clerkPubKey = 
+  import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || 
+  publishableKeyFromHost(
+    window.location.hostname,
+    import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
+  );
 
-const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL;
+const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL || undefined;
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -30,8 +33,13 @@ function stripBase(path: string): string {
     : path;
 }
 
+// Only throw error if we're in a production environment
+if (!clerkPubKey && import.meta.env.PROD) {
+  throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY in production");
+}
+
 if (!clerkPubKey) {
-  throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY");
+  console.warn("[v0] Clerk is not configured. Using fallback configuration for development.");
 }
 
 const BG = "#0d0e14";
@@ -177,8 +185,37 @@ function ClerkQueryClientCacheInvalidator() {
   return null;
 }
 
+function AppRoutes() {
+  return (
+    <Switch>
+      <Route path="/" component={LandingPage} />
+      <Route path="/login">
+        <Redirect to="/sign-in" />
+      </Route>
+      <Route path="/sign-in/*?" component={SignInPage} />
+      <Route path="/sign-up/*?" component={SignUpPage} />
+      <Route path="/build">{() => <PrivatePage component={WorkspacePage} />}</Route>
+      <Route path="/projects">{() => <PrivatePage component={ProjectsPage} />}</Route>
+      <Route path="/tools">{() => <PrivatePage component={ToolsPage} />}</Route>
+      <Route path="/library">{() => <PrivatePage component={LibraryPage} />}</Route>
+      <Route path="/extensions">{() => <PrivatePage component={ExtensionsPage} />}</Route>
+      <Route path="/profile">{() => <PrivatePage component={ProfilePage} />}</Route>
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
+
 function ClerkProviderWithRoutes() {
   const [, setLocation] = useLocation();
+
+  if (!clerkPubKey) {
+    // Fallback for development without Clerk configuration
+    return (
+      <QueryClientProvider client={queryClient}>
+        <AppRoutes />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <ClerkProvider
@@ -208,21 +245,7 @@ function ClerkProviderWithRoutes() {
     >
       <QueryClientProvider client={queryClient}>
         <ClerkQueryClientCacheInvalidator />
-        <Switch>
-          <Route path="/" component={LandingPage} />
-          <Route path="/login">
-            <Redirect to="/sign-in" />
-          </Route>
-          <Route path="/sign-in/*?" component={SignInPage} />
-          <Route path="/sign-up/*?" component={SignUpPage} />
-          <Route path="/build">{() => <PrivatePage component={WorkspacePage} />}</Route>
-          <Route path="/projects">{() => <PrivatePage component={ProjectsPage} />}</Route>
-          <Route path="/tools">{() => <PrivatePage component={ToolsPage} />}</Route>
-          <Route path="/library">{() => <PrivatePage component={LibraryPage} />}</Route>
-          <Route path="/extensions">{() => <PrivatePage component={ExtensionsPage} />}</Route>
-          <Route path="/profile">{() => <PrivatePage component={ProfilePage} />}</Route>
-          <Route component={NotFound} />
-        </Switch>
+        <AppRoutes />
       </QueryClientProvider>
     </ClerkProvider>
   );
