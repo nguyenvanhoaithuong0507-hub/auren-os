@@ -1,4 +1,5 @@
 import { useState, type ReactElement } from "react";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 
@@ -48,7 +49,6 @@ function ToolLogo({ name, color }: { name: string; color: string }) {
   // Fallback: colored initial
   const initial = name.charAt(0).toUpperCase();
   return (
-    <ViewTransition default="none" enter="fade-in">
     <div style={{ width: 22, height: 22, borderRadius: 5, backgroundColor: color + "22", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 800, color }}>
       {initial}
     </div>
@@ -165,7 +165,8 @@ export default function ToolsPage() {
   const totalTools = TOOL_CATEGORIES.reduce((s, c) => s + c.tools.length, 0);
 
   return (
-    <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
+    <ViewTransition default="none" enter="fade-in">
+      <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
       <style>{`
         .tool-card:hover{border-color:rgba(0,207,171,0.3)!important;background:rgba(0,207,171,0.04)!important;transform:translateY(-2px)}
         .tool-card{transition:all 0.15s ease;cursor:pointer}
@@ -290,6 +291,7 @@ export default function ToolsPage() {
       </div>
 
       <MobileNav active="tools" />
-    </div>
+      </div>
+    </ViewTransition>
   );
 }

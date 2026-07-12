@@ -1,4 +1,5 @@
 import { useState, type ReactElement } from "react";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 

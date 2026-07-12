@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ViewTransition } from "react";
 import { useLocation } from "wouter";
 import { ViewTransition } from "react";
 import { useUser, useClerk, useAuth } from "@clerk/react";

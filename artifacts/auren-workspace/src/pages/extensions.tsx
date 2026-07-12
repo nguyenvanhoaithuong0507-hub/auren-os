@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 
@@ -65,7 +66,7 @@ export default function ExtensionsPage() {
 
   return (
     <ViewTransition default="none" enter="fade-in">
-    <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
+      <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
       <style>{`
         *{box-sizing:border-box}
         .ext-card:hover{border-color:rgba(0,207,171,0.2)!important}
@@ -185,7 +186,8 @@ export default function ExtensionsPage() {
       </div>
 
       <MobileNav active="extensions" />
-    </div>
+      </div>
+    </ViewTransition>
   );
 }
 
