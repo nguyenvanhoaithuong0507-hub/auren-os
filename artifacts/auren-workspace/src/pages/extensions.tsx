@@ -64,6 +64,7 @@ export default function ExtensionsPage() {
   const enabledCount = Object.values(enabled).filter(Boolean).length;
 
   return (
+    <ViewTransition default="none" enter="fade-in">
     <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
       <style>{`
         *{box-sizing:border-box}

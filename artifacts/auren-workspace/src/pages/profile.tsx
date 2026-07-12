@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
+import { ViewTransition } from "react";
 import { useUser, useClerk, useAuth } from "@clerk/react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Sidebar from "@/components/Sidebar";
@@ -102,6 +103,7 @@ export default function ProfilePage() {
   const initials = displayName.slice(0, 2).toUpperCase();
 
   return (
+    <ViewTransition default="none" enter="fade-in">
     <div style={{ display: "flex", backgroundColor: BG, minHeight: "100dvh", color: TEXT, fontFamily: "'Inter', system-ui, sans-serif" }}>
       <style>{`*{box-sizing:border-box}input{outline:none}@keyframes shimmer{0%{opacity:0.4}50%{opacity:0.7}100%{opacity:0.4}}@media(max-width:767px){.desktop-sidebar{display:none!important}}`}</style>
       <Sidebar active="profile" />
