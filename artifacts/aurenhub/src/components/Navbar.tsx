@@ -3,12 +3,12 @@ import { useLocation } from "wouter";
 import Drawer from "./Drawer";
 import { useUser, useClerk } from "@clerk/react";
 
-const BG = "#080809";
+const BG = "#0f0f0f";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM = "#2c2d32";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM = "#262626";
 
 export default function Navbar({ onSearch }: { onSearch?: (q: string) => void }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Navbar({ onSearch }: { onSearch?: (q: string) => void })
       }}>
         {/* Hamburger */}
         <button onClick={() => setDrawerOpen(true)}
-          style={{ width: 38, height: 38, borderRadius: 8, border: `1px solid ${BORDER}`, backgroundColor: DIM, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0, flexDirection: "column", gap: 0 }}>
+          style={{ width: 38, height: 38, borderRadius: 2, border: `1px solid ${BORDER}`, backgroundColor: "#161616", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0, flexDirection: "column", gap: 0 }}>
           {[0,1,2].map(i => <div key={i} style={{ width: 14, height: 1.5, backgroundColor: TEXT, marginBlock: 1.5 }} />)}
         </button>
 
@@ -49,7 +49,7 @@ export default function Navbar({ onSearch }: { onSearch?: (q: string) => void })
             type="search"
             placeholder="Search skills and plugins"
             onChange={e => onSearch?.(e.target.value)}
-            style={{ width: "100%", padding: "9px 14px 9px 36px", backgroundColor: DIM, border: `1px solid ${BORDER}`, borderRadius: 8, color: TEXT, fontSize: 13, outline: "none" }}
+            style={{ width: "100%", padding: "9px 14px 9px 36px", backgroundColor: "#161616", border: `1px solid ${BORDER}`, borderRadius: 2, color: TEXT, fontSize: 13, outline: "none" }}
           />
         </div>
 
@@ -57,7 +57,7 @@ export default function Navbar({ onSearch }: { onSearch?: (q: string) => void })
         {isSignedIn && user ? (
           <div style={{ position: "relative" }}>
             <button onClick={() => setUserMenuOpen(v => !v)}
-              style={{ width: 38, height: 38, borderRadius: 8, border: `1px solid ${ACCENT}40`, backgroundColor: `${ACCENT}18`, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0, overflow: "hidden" }}>
+              style={{ width: 38, height: 38, borderRadius: 2, border: `1px solid ${ACCENT}40`, backgroundColor: `${ACCENT}18`, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0, overflow: "hidden" }}>
               {user.imageUrl ? (
                 <img src={user.imageUrl} alt="avatar" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               ) : (
@@ -67,7 +67,7 @@ export default function Navbar({ onSearch }: { onSearch?: (q: string) => void })
 
             {/* User dropdown */}
             {userMenuOpen && (
-              <div style={{ position: "absolute", top: 44, right: 0, width: 200, backgroundColor: "#0f0f12", border: `1px solid ${BORDER}`, borderRadius: 10, padding: "6px", zIndex: 999, animation: "fade-down 0.18s ease" }}>
+              <div style={{ position: "absolute", top: 44, right: 0, width: 200, backgroundColor: "#161616", border: `1px solid ${BORDER}`, borderRadius: 2, padding: "6px", zIndex: 999, animation: "fade-down 0.18s ease" }}>
                 <div style={{ padding: "8px 10px 10px", borderBottom: `1px solid ${BORDER}`, marginBottom: 6 }}>
                   <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 2 }}>{displayName}</div>
                   <div style={{ fontSize: 10, color: MUTED }}>{user.primaryEmailAddress?.emailAddress}</div>
@@ -78,14 +78,14 @@ export default function Navbar({ onSearch }: { onSearch?: (q: string) => void })
                   { label: "Cài đặt", action: () => { navigate("/profile"); setUserMenuOpen(false); } },
                 ].map(item => (
                   <button key={item.label} onClick={item.action}
-                    style={{ display: "block", width: "100%", textAlign: "left", padding: "8px 10px", background: "transparent", border: "none", color: MUTED, fontSize: 12, cursor: "pointer", borderRadius: 6 }}
+                    style={{ display: "block", width: "100%", textAlign: "left", padding: "8px 10px", background: "transparent", border: "none", color: MUTED, fontSize: 12, cursor: "pointer", borderRadius: 2 }}
                     onMouseEnter={e => { e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.04)"; e.currentTarget.style.color = TEXT; }}
                     onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = MUTED; }}>
                     {item.label}
                   </button>
                 ))}
                 <button onClick={handleLogout}
-                  style={{ display: "block", width: "100%", textAlign: "left", padding: "8px 10px", background: "transparent", border: "none", color: "#f87171", fontSize: 12, cursor: "pointer", borderRadius: 6, marginTop: 2, borderTop: `1px solid ${BORDER}` }}>
+                  style={{ display: "block", width: "100%", textAlign: "left", padding: "8px 10px", background: "transparent", border: "none", color: "#f87171", fontSize: 12, cursor: "pointer", borderRadius: 2, marginTop: 2, borderTop: `1px solid ${BORDER}` }}>
                   Đăng xuất
                 </button>
               </div>
@@ -93,7 +93,7 @@ export default function Navbar({ onSearch }: { onSearch?: (q: string) => void })
           </div>
         ) : (
           <button onClick={() => navigate("/sign-in")}
-            style={{ height: 34, padding: "0 14px", borderRadius: 8, border: "none", backgroundColor: ACCENT, color: "#080809", fontSize: 12, fontWeight: 700, cursor: "pointer", flexShrink: 0, whiteSpace: "nowrap" }}>
+            style={{ height: 34, padding: "0 14px", borderRadius: 2, border: "none", backgroundColor: ACCENT, color: "#0f0f0f", fontSize: 12, fontWeight: 700, cursor: "pointer", flexShrink: 0, whiteSpace: "nowrap" }}>
             Đăng nhập
           </button>
         )}
