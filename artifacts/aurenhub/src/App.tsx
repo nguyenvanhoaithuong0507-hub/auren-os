@@ -40,11 +40,11 @@ if (!clerkPubKey) {
   throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY");
 }
 
-const BG = "#080809";
-const CARD = "#0f0f12";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
+const BG = "#0f0f0f";
+const CARD = "#161616";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
 const BORDER = "rgba(255,255,255,0.07)";
 
 const clerkAppearance = {
@@ -64,7 +64,7 @@ const clerkAppearance = {
     colorInput: "rgba(255,255,255,0.04)",
     colorInputForeground: TEXT,
     colorNeutral: BORDER,
-    fontFamily: "'Inter', system-ui, sans-serif",
+    fontFamily: "'IBM Plex Sans', 'IBM Plex Sans', 'Inter', system-ui, sans-serif",
     borderRadius: "10px",
   },
   elements: {
@@ -78,7 +78,7 @@ const clerkAppearance = {
     formFieldLabel: { color: MUTED, fontSize: "12px" },
     footerActionLink: { color: ACCENT },
     footerActionText: { color: MUTED },
-    dividerText: { color: "#3a4155" },
+    dividerText: { color: "#6f6f6f" },
     identityPreviewEditButton: { color: ACCENT },
     formFieldSuccessText: { color: ACCENT },
     alertText: { color: TEXT },
@@ -116,9 +116,9 @@ function SignInPage() {
       alignItems: "center",
       justifyContent: "center",
       padding: "32px 20px",
-      fontFamily: "'Inter', system-ui, sans-serif",
+      fontFamily: "'IBM Plex Sans', 'IBM Plex Sans', 'Inter', system-ui, sans-serif",
     }}>
-      <style>{`.cl-formFieldInput::placeholder { color: #3a4155; opacity: 1; }`}</style>
+      <style>{`.cl-formFieldInput::placeholder { color: #6f6f6f; opacity: 1; }`}</style>
       <SignIn
         routing="path"
         path={`${basePath}/sign-in`}
@@ -138,9 +138,9 @@ function SignUpPage() {
       alignItems: "center",
       justifyContent: "center",
       padding: "32px 20px",
-      fontFamily: "'Inter', system-ui, sans-serif",
+      fontFamily: "'IBM Plex Sans', 'IBM Plex Sans', 'Inter', system-ui, sans-serif",
     }}>
-      <style>{`.cl-formFieldInput::placeholder { color: #3a4155; opacity: 1; }`}</style>
+      <style>{`.cl-formFieldInput::placeholder { color: #6f6f6f; opacity: 1; }`}</style>
       <SignUp
         routing="path"
         path={`${basePath}/sign-up`}
