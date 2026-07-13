@@ -1,15 +1,15 @@
 import { useLocation } from "wouter";
 import Navbar from "@/components/Navbar";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
-const CARD2 = "#13131a";
+const BG = "#0f0f0f";
+const CARD = "#161616";
+const CARD2 = "#262626";
 const BORDER = "rgba(255,255,255,0.06)";
 const BORDER2 = "rgba(255,255,255,0.10)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM = "#6f6f6f";
 
 const APPS = [
   {
@@ -23,9 +23,9 @@ const APPS = [
         <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
       </svg>
     ),
-    color: "#00cfab",
+    color: "#0f62fe",
     badge: "MAIN",
-    badgeColor: "#00cfab",
+    badgeColor: "#0f62fe",
     stats: [{ label: "Tools", val: "50+" }, { label: "Libraries", val: "50+" }, { label: "Extensions", val: "30+" }],
   },
   {
@@ -110,7 +110,7 @@ export default function PortalPage() {
     <div style={{ backgroundColor: BG, minHeight: "100dvh", color: TEXT }}>
       <style>{`
         *{box-sizing:border-box}
-        .app-card:hover{border-color:rgba(255,255,255,0.14)!important;transform:translateY(-4px);background:#13131a!important}
+        .app-card:hover{border-color:rgba(255,255,255,0.14)!important;transform:translateY(-4px);background:#262626!important}
         .app-card{transition:all 0.2s ease}
         .app-btn:hover{opacity:0.85}
         .app-btn{transition:opacity 0.15s}
