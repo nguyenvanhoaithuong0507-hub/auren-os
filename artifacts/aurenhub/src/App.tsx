@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/reac
 import { ClerkProvider, SignIn, SignUp, Show, useClerk } from "@clerk/react";
 import { publishableKeyFromHost } from "@clerk/react/internal";
 import { shadcn } from "@clerk/themes";
+import { Analytics } from "@vercel/analytics/react";
 import HomePage from "@/pages/home";
 import SkillsPage from "@/pages/skills";
 import PluginsPage from "@/pages/plugins";
@@ -249,6 +250,7 @@ export default function App() {
   return (
     <WouterRouter base={basePath}>
       <ClerkProviderWithRoutes />
+      <Analytics />
     </WouterRouter>
   );
 }

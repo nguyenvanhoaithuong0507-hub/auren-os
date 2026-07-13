@@ -2,12 +2,6 @@ import { useLocation } from "wouter";
 import { AuRenMark } from "./AuRenMascot";
 import { useClerk, useUser } from "@clerk/react";
 
-const BG_SIDEBAR = "#07080e";
-const BORDER = "#1a1f2e";
-const ACCENT = "#00cfab";
-const DIMMED = "#3a4155";
-const MUTED = "#8892a4";
-
 const NAV_ITEMS = [
   {
     id: "home", href: "/build", label: "Build",
@@ -49,52 +43,73 @@ export default function Sidebar({ active }: { active: string }) {
   }
 
   return (
-    <aside className="desktop-sidebar" style={{ width: 56, flexShrink: 0, backgroundColor: BG_SIDEBAR, borderRight: `1px solid ${BORDER}`, display: "flex", flexDirection: "column", alignItems: "center", padding: "10px 0", position: "sticky", top: 0, height: "100dvh", zIndex: 60 }}>
+    <aside className="w-14 flex-shrink-0 border-r border-border sticky top-0 h-screen z-60 bg-background flex flex-col items-center py-3">
       {/* Logo */}
-      <div onClick={() => navigate("/")} style={{ marginBottom: 16, cursor: "pointer", padding: 4 }} title="AuRen">
+      <div onClick={() => navigate("/")} className="mb-4 cursor-pointer p-1 hover:opacity-75 transition-smooth" title="AuRen">
         <AuRenMark size={30} />
       </div>
-      <div style={{ width: 28, height: 1, backgroundColor: BORDER, marginBottom: 10 }} />
+      <div className="w-7 h-px bg-border mb-2" />
 
       {/* Nav */}
-      <nav style={{ flex: 1, display: "flex", flexDirection: "column", gap: 3, width: "100%", alignItems: "center" }}>
+      <nav className="flex-1 flex flex-col gap-1 w-full items-center">
         {NAV_ITEMS.map(item => {
           const isActive = active === item.id;
           return (
-            <button key={item.id} onClick={() => navigate(item.href)} title={item.label}
-              style={{ width: 40, height: 40, borderRadius: 9, border: "none", backgroundColor: isActive ? `${ACCENT}18` : "transparent", color: isActive ? ACCENT : DIMMED, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.15s", position: "relative" }}
-              onMouseEnter={e => { if (!isActive) { e.currentTarget.style.color = MUTED; e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)"; }}}
-              onMouseLeave={e => { e.currentTarget.style.color = isActive ? ACCENT : DIMMED; e.currentTarget.style.backgroundColor = isActive ? `${ACCENT}18` : "transparent"; }}>
+            <button
+              key={item.id}
+              onClick={() => navigate(item.href)}
+              title={item.label}
+              className={`relative w-10 h-10 rounded-lg border-none cursor-pointer flex items-center justify-center transition-smooth group ${
+                isActive
+                  ? "bg-accent/10 text-accent"
+                  : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
+            >
               {item.icon}
-              {isActive && <div style={{ position: "absolute", left: -1, top: "50%", transform: "translateY(-50%)", width: 3, height: 20, backgroundColor: ACCENT, borderRadius: "0 2px 2px 0" }} />}
+              {isActive && (
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-5 bg-accent rounded-r" />
+              )}
             </button>
           );
         })}
       </nav>
 
       {/* Bottom */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "center" }}>
+      <div className="flex flex-col gap-1 items-center">
         {BOTTOM_ITEMS.map(item => (
-          <button key={item.id} title={item.label} onClick={() => navigate("/profile")}
-            style={{ width: 40, height: 40, borderRadius: 9, border: "none", backgroundColor: active === "profile" ? `${ACCENT}18` : "transparent", color: active === "profile" ? ACCENT : DIMMED, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.15s" }}
-            onMouseEnter={e => { if (active !== "profile") { e.currentTarget.style.color = MUTED; e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)"; }}}
-            onMouseLeave={e => { e.currentTarget.style.color = active === "profile" ? ACCENT : DIMMED; e.currentTarget.style.backgroundColor = active === "profile" ? `${ACCENT}18` : "transparent"; }}>
+          <button
+            key={item.id}
+            title={item.label}
+            onClick={() => navigate("/profile")}
+            className={`w-10 h-10 rounded-lg border-none cursor-pointer flex items-center justify-center transition-smooth ${
+              active === "profile"
+                ? "bg-accent/10 text-accent"
+                : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-secondary"
+            }`}
+          >
             {item.icon}
           </button>
         ))}
         {/* Logout */}
-        <button onClick={handleLogout} title="Đăng xuất"
-          style={{ width: 40, height: 40, borderRadius: 9, border: "none", backgroundColor: "transparent", color: DIMMED, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.15s", marginTop: 2 }}
-          onMouseEnter={e => { e.currentTarget.style.color = "#f87171"; e.currentTarget.style.backgroundColor = "rgba(248,113,113,0.08)"; }}
-          onMouseLeave={e => { e.currentTarget.style.color = DIMMED; e.currentTarget.style.backgroundColor = "transparent"; }}>
+        <button
+          onClick={handleLogout}
+          title="Sign Out"
+          className="w-10 h-10 rounded-lg border-none bg-transparent text-muted-foreground cursor-pointer flex items-center justify-center transition-smooth hover:text-red-500 hover:bg-red-500/10 mt-1"
+        >
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
         </button>
-        {/* Avatar — click to go to profile */}
-        <div onClick={() => navigate("/profile")} style={{ width: 30, height: 30, borderRadius: "50%", overflow: "hidden", marginTop: 4, cursor: "pointer", border: active === "profile" ? `1.5px solid ${ACCENT}` : "1.5px solid transparent", transition: "border-color 0.15s" }} title={user?.firstName ?? "My Profile"}>
+        {/* Avatar */}
+        <div
+          onClick={() => navigate("/profile")}
+          className={`w-8 h-8 rounded-full overflow-hidden mt-3 cursor-pointer transition-smooth border-2 ${
+            active === "profile" ? "border-accent" : "border-transparent hover:border-accent/50"
+          }`}
+          title={user?.firstName ?? "My Profile"}
+        >
           {user?.imageUrl ? (
-            <img src={user.imageUrl} alt="avatar" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={user.imageUrl} alt="avatar" className="w-full h-full object-cover" />
           ) : (
-            <AuRenMark size={30} />
+            <AuRenMark size={32} />
           )}
         </div>
       </div>
