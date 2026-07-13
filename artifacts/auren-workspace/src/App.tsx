@@ -147,6 +147,11 @@ function SignUpPage() {
 }
 
 function PrivatePage({ component: Component }: { component: React.ComponentType }) {
+  if (clerkPubKey === null) {
+    // If Clerk is not configured, just render the component without auth checks
+    return <Component />;
+  }
+  
   return (
     <>
       <Show when="signed-in">
@@ -160,6 +165,11 @@ function PrivatePage({ component: Component }: { component: React.ComponentType 
 }
 
 function ClerkQueryClientCacheInvalidator() {
+  if (clerkPubKey === null) {
+    // Clerk not configured, no need to invalidate cache
+    return null;
+  }
+  
   const { addListener } = useClerk();
   const qc = useQueryClient();
   const prevUserIdRef = useRef<string | null | undefined>(undefined);
