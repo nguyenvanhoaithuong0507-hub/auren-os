@@ -1,18 +1,19 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { AppIcon } from "@/components/AppIcon";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 const COLLECTIONS = [
   {
     id: "devops-starter",
-    emoji: "🚀",
+    emoji: "rocket",
     color: "#7AA2F7",
     name: "DevOps Starter Pack",
     curator: "AuRen Team",
@@ -24,7 +25,7 @@ const COLLECTIONS = [
   },
   {
     id: "viet-dev",
-    emoji: "🇻🇳",
+    emoji: "globe",
     color: "#F7768E",
     name: "Bộ công cụ lập trình Việt",
     curator: "@nguyenviet",
@@ -36,7 +37,7 @@ const COLLECTIONS = [
   },
   {
     id: "fullstack-next",
-    emoji: "⚡",
+    emoji: "skills",
     color: "#9ECE6A",
     name: "Full-Stack Next.js Kit",
     curator: "AuRen Team",
@@ -48,7 +49,7 @@ const COLLECTIONS = [
   },
   {
     id: "ai-research",
-    emoji: "🔬",
+    emoji: "tool",
     color: "#BB9AF7",
     name: "AI Research Toolkit",
     curator: "@research-lab",
@@ -60,7 +61,7 @@ const COLLECTIONS = [
   },
   {
     id: "content-creator",
-    emoji: "✍️",
+    emoji: "edit",
     color: "#E0AF68",
     name: "Content Creator Bundle",
     curator: "@dothuy",
@@ -72,7 +73,7 @@ const COLLECTIONS = [
   },
   {
     id: "data-science",
-    emoji: "📊",
+    emoji: "chart",
     color: "#E0AF68",
     name: "Data Science Essentials",
     curator: "AuRen Team",
@@ -122,7 +123,7 @@ export default function CollectionsPage() {
               {view === "grid" ? (
                 <>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-                    <div style={{ width: 46, height: 46, borderRadius: 12, backgroundColor: `${c.color}18`, border: `1px solid ${c.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24 }}>{c.emoji}</div>
+                    <div style={{ width: 46, height: 46, borderRadius: 12, backgroundColor: `${c.color}18`, border: `1px solid ${c.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24 }}><AppIcon name={c.emoji} color={c.color} size={22} /></div>
                     {c.verified && <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: ACCENT, background: `${ACCENT}18`, padding: "2px 8px", borderRadius: 4 }}>✓ Chính thức</span>}
                   </div>
                   <div style={{ fontSize: 14, fontWeight: 800, color: TEXT, marginBottom: 6, letterSpacing: "-0.01em" }}>{c.name}</div>
@@ -138,7 +139,7 @@ export default function CollectionsPage() {
                 </>
               ) : (
                 <>
-                  <div style={{ width: 40, height: 40, borderRadius: 10, backgroundColor: `${c.color}18`, border: `1px solid ${c.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>{c.emoji}</div>
+                  <div style={{ width: 40, height: 40, borderRadius: 10, backgroundColor: `${c.color}18`, border: `1px solid ${c.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}><AppIcon name={c.emoji} color={c.color} size={22} /></div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 2 }}>{c.name}</div>
                     <div style={{ fontSize: 11, color: MUTED, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.desc}</div>
