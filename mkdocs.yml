@@ -1,0 +1,23 @@
+site_name: Auren OS
+site_description: Tài liệu chính thức Auren OS
+site_author: Nguyen Van Hoai Thuong
+site_url: https://nguyenvanhoaithuong0507-hub.github.io/auren-os/
+repo_name: nguyenvanhoaithuong0507-hub/auren-os
+repo_url: https://github.com/nguyenvanhoaithuong0507-hub/auren-os
+
+theme:
+  name: material
+  language: vi
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Contributing: contributing.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+
+plugins:
+  - search
