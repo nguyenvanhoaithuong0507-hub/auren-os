@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Switch, Route, Router as WouterRouter, Redirect, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
 import { ClerkProvider, SignIn, SignUp, Show, useClerk } from "@clerk/react";
-import { publishableKeyFromHost } from "@clerk/react/internal";
 import { shadcn } from "@clerk/themes";
 import LandingPage from "@/pages/landing";
 import WorkspacePage from "@/pages/workspace";
@@ -15,12 +14,9 @@ import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
-const clerkPubKey = publishableKeyFromHost(
-  window.location.hostname,
-  import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
-);
-
-const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL;
+// Only use Clerk if explicitly configured via environment variables
+const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || null;
+const clerkProxyUrl = import.meta.env.VITE_CLERK_PROXY_URL || undefined;
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -30,8 +26,13 @@ function stripBase(path: string): string {
     : path;
 }
 
-if (!clerkPubKey) {
-  throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY");
+// Only throw error if we're in a production environment
+if (clerkPubKey === null && import.meta.env.PROD) {
+  throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY in production");
+}
+
+if (clerkPubKey === null) {
+  console.warn("[v0] Clerk is not configured. Using fallback routing for development.");
 }
 
 const BG = "#0d0e14";
@@ -146,6 +147,11 @@ function SignUpPage() {
 }
 
 function PrivatePage({ component: Component }: { component: React.ComponentType }) {
+  if (clerkPubKey === null) {
+    // If Clerk is not configured, just render the component without auth checks
+    return <Component />;
+  }
+  
   return (
     <>
       <Show when="signed-in">
@@ -159,6 +165,11 @@ function PrivatePage({ component: Component }: { component: React.ComponentType 
 }
 
 function ClerkQueryClientCacheInvalidator() {
+  if (clerkPubKey === null) {
+    // Clerk not configured, no need to invalidate cache
+    return null;
+  }
+  
   const { addListener } = useClerk();
   const qc = useQueryClient();
   const prevUserIdRef = useRef<string | null | undefined>(undefined);
@@ -177,8 +188,37 @@ function ClerkQueryClientCacheInvalidator() {
   return null;
 }
 
+function AppRoutes() {
+  return (
+    <Switch>
+      <Route path="/" component={LandingPage} />
+      <Route path="/login">
+        <Redirect to="/sign-in" />
+      </Route>
+      <Route path="/sign-in/*?" component={SignInPage} />
+      <Route path="/sign-up/*?" component={SignUpPage} />
+      <Route path="/build">{() => <PrivatePage component={WorkspacePage} />}</Route>
+      <Route path="/projects">{() => <PrivatePage component={ProjectsPage} />}</Route>
+      <Route path="/tools">{() => <PrivatePage component={ToolsPage} />}</Route>
+      <Route path="/library">{() => <PrivatePage component={LibraryPage} />}</Route>
+      <Route path="/extensions">{() => <PrivatePage component={ExtensionsPage} />}</Route>
+      <Route path="/profile">{() => <PrivatePage component={ProfilePage} />}</Route>
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
+
 function ClerkProviderWithRoutes() {
   const [, setLocation] = useLocation();
+
+  if (clerkPubKey === null) {
+    // Fallback for development without Clerk configuration
+    return (
+      <QueryClientProvider client={queryClient}>
+        <AppRoutes />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <ClerkProvider
@@ -208,21 +248,7 @@ function ClerkProviderWithRoutes() {
     >
       <QueryClientProvider client={queryClient}>
         <ClerkQueryClientCacheInvalidator />
-        <Switch>
-          <Route path="/" component={LandingPage} />
-          <Route path="/login">
-            <Redirect to="/sign-in" />
-          </Route>
-          <Route path="/sign-in/*?" component={SignInPage} />
-          <Route path="/sign-up/*?" component={SignUpPage} />
-          <Route path="/build">{() => <PrivatePage component={WorkspacePage} />}</Route>
-          <Route path="/projects">{() => <PrivatePage component={ProjectsPage} />}</Route>
-          <Route path="/tools">{() => <PrivatePage component={ToolsPage} />}</Route>
-          <Route path="/library">{() => <PrivatePage component={LibraryPage} />}</Route>
-          <Route path="/extensions">{() => <PrivatePage component={ExtensionsPage} />}</Route>
-          <Route path="/profile">{() => <PrivatePage component={ProfilePage} />}</Route>
-          <Route component={NotFound} />
-        </Switch>
+        <AppRoutes />
       </QueryClientProvider>
     </ClerkProvider>
   );
