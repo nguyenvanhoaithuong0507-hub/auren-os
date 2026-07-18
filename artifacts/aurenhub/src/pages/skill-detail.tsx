@@ -2,14 +2,15 @@ import { useLocation, useRoute } from "wouter";
 import Navbar from "@/components/Navbar";
 import { SKILLS } from "@/data/catalog";
 import { AuRenMascot } from "@/components/AuRenMascot";
+import { AppIcon } from "@/components/AppIcon";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 export default function SkillDetailPage() {
   const [, navigate] = useLocation();
@@ -40,7 +41,7 @@ export default function SkillDetailPage() {
         {/* Header */}
         <div style={{ display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 24 }}>
           <div style={{ width: 60, height: 60, borderRadius: 14, backgroundColor: skill.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, flexShrink: 0, border: `1px solid ${skill.color}25` }}>
-            {skill.icon}
+            <AppIcon name={skill.iconName ?? "tool"} color={skill.color} size={20} />
           </div>
           <div style={{ flex: 1 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
@@ -96,7 +97,7 @@ export default function SkillDetailPage() {
               {related.map(r => (
                 <div key={r.id} onClick={() => navigate(`/skills/${r.id}`)}
                   style={{ display: "flex", gap: 12, alignItems: "center", padding: "12px 14px", backgroundColor: CARD, border: `1px solid ${BORDER}`, borderRadius: 10, cursor: "pointer" }}>
-                  <div style={{ width: 36, height: 36, borderRadius: 8, backgroundColor: r.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0 }}>{r.icon}</div>
+                  <div style={{ width: 36, height: 36, borderRadius: 8, backgroundColor: r.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0 }}><AppIcon name={r.iconName ?? "tool"} color={r.color} size={16} /></div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: TEXT, marginBottom: 2 }}>{r.name}</div>
                     <div style={{ fontSize: 10, color: DIM2 }}>{r.publisher} · ↓ {r.installs}</div>
