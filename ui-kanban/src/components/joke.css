@@ -1,0 +1,62 @@
+.joke-widget {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  max-width: 420px;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+.joke-widget h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.joke-loading,
+.joke-error {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.joke-body {
+  margin: 8px 0;
+}
+
+.joke-text {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.joke-setup {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.joke-punchline {
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.joke-meta {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.joke-actions {
+  margin-top: 8px;
+}
+
+.joke-actions button {
+  padding: 6px 10px;
+  background: #2b7cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.joke-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
