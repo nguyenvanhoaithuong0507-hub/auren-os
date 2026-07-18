@@ -1,14 +1,44 @@
 @layer theme, base, clerk, components, utilities;
 @import "tailwindcss";
 
+:root {
+  --auren-bg: #0f0f0f;
+  --auren-layer: #161616;
+  --auren-layer-hover: #262626;
+  --auren-border: #393939;
+  --auren-blue: #0f62fe;
+  --auren-blue-hover: #4589ff;
+  --auren-text: #f4f4f4;
+  --auren-muted: #a8a8a8;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #080809;
-  color: #e8eaf2;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--auren-bg);
+  color: var(--auren-text);
+  font-family: 'IBM Plex Sans', 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 input, button, textarea { font-family: inherit; }
 a { text-decoration: none; color: inherit; }
+
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  border-radius: 2px !important;
+}
+
+button {
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+svg path,
+svg rect,
+svg circle,
+svg ellipse {
+  vector-effect: non-scaling-stroke;
+}
