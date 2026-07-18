@@ -2,14 +2,15 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { PLUGINS } from "@/data/catalog";
 import { AuRenMascot } from "@/components/AuRenMascot";
+import { AppIcon } from "@/components/AppIcon";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 export default function PluginsPage() {
   const [search, setSearch] = useState("");
@@ -24,7 +25,7 @@ export default function PluginsPage() {
 
   return (
     <div style={{ backgroundColor: BG, minHeight: "100dvh", color: TEXT }}>
-      <style>{`*{box-sizing:border-box}input{outline:none}input::placeholder{color:#3a4155}.pl-card:hover{border-color:rgba(0,207,171,0.25)!important;background:#13131a!important}.pl-card{transition:all 0.15s}`}</style>
+      <style>{`*{box-sizing:border-box}input{outline:none}input::placeholder{color:#6f6f6f}.pl-card:hover{border-color:rgba(0,207,171,0.25)!important;background:#262626!important}.pl-card{transition:all 0.15s}`}</style>
       <Navbar onSearch={setSearch} />
       <main style={{ padding: "24px 20px 80px", maxWidth: 720, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
@@ -50,7 +51,7 @@ export default function PluginsPage() {
             <div style={{ display: "flex", gap: 10, overflowX: "auto", paddingBottom: 6, marginBottom: 24, scrollbarWidth: "none" }}>
               {PLUGINS.filter(p => p.featured).map(plugin => (
                 <div key={plugin.id} style={{ width: 180, flexShrink: 0, padding: "18px 16px", backgroundColor: `${ACCENT}08`, border: `1px solid ${ACCENT}25`, borderRadius: 14, cursor: "pointer" }}>
-                  <div style={{ width: 42, height: 42, borderRadius: 10, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, marginBottom: 10 }}>{plugin.icon}</div>
+                  <div style={{ width: 42, height: 42, borderRadius: 10, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, marginBottom: 10 }}><AppIcon name={plugin.iconName ?? "plugins"} color={plugin.color} size={18} /></div>
                   <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 5 }}>{plugin.name}</div>
                   <p style={{ fontSize: 11, color: MUTED, lineHeight: 1.5, marginBottom: 10 }}>{plugin.desc}</p>
                   <button style={{ width: "100%", padding: "7px", borderRadius: 6, border: "none", backgroundColor: ACCENT, color: BG, fontSize: 11, fontWeight: 700, cursor: "pointer" }}>Install</button>
@@ -67,7 +68,7 @@ export default function PluginsPage() {
             <div key={plugin.id} className="pl-card"
               style={{ padding: "14px", backgroundColor: CARD, border: `1px solid ${BORDER}`, borderRadius: 10, cursor: "pointer" }}>
               <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 8 }}>
-                <div style={{ width: 36, height: 36, borderRadius: 8, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0 }}>{plugin.icon}</div>
+                <div style={{ width: 36, height: 36, borderRadius: 8, backgroundColor: plugin.color + "18", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, flexShrink: 0 }}><AppIcon name={plugin.iconName ?? "plugins"} color={plugin.color} size={18} /></div>
                 <div>
                   <div style={{ fontSize: 12, fontWeight: 700, color: TEXT, marginBottom: 2 }}>{plugin.name}</div>
                   <div style={{ fontSize: 10, color: DIM2 }}>★ {plugin.rating}</div>
