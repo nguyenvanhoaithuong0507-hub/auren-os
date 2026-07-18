@@ -1,0 +1,366 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title type="text" xml:lang="en"> AuRen OS - Code Editing. Redefined.</title>
+<link type="application/atom+xml" href="https://code.visualstudio.com/feed.xml" rel="self"/>
+<link type="text/html" href="https://code.visualstudio.com/" rel="alternate"/>
+<updated>2026-07-08T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/</id>
+<rights>Copyright (c) 2021, Microsoft, Inc.; all rights reserved.</rights>
+<entry>
+<title>Visual Studio Code 1.128</title>
+<link href="https://code.visualstudio.com/updates/v1_128"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_128/release-highlights.webp"/>
+<updated>2026-07-08T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_128</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.128</p> <p><a href="https://code.visualstudio.com/updates/v1_128">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.129 (Insiders)</title>
+<link href="https://code.visualstudio.com/updates/v1_129"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_129/release-highlights.webp"/>
+<updated>2026-07-08T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_129</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.129 (Insiders)</p> <p><a href="https://code.visualstudio.com/updates/v1_129">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>How Prompt Tuning Improved GPT-5.5 in VS Code</title>
+<link href="https://code.visualstudio.com/blogs/2026/07/06/optimizing-vscode-coding-harness-model-providers"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/07/06/gpt55-metrics-comparison.png"/>
+<updated>2026-07-06T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/07/06/optimizing-vscode-coding-harness-model-providers</id>
+<category term="blog"/>
+<content type="html"> <p>See how VS Code and OpenAI tested GPT-5.5 system prompt changes in a two-week experiment, cutting tool calls and tail-end token usage while speeding up edits.</p> <p><a href="https://code.visualstudio.com/blogs/2026/07/06/optimizing-vscode-coding-harness-model-providers">Read the full article</a></p> </content>
+<author>
+<name>VS Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.127</title>
+<link href="https://code.visualstudio.com/updates/v1_127"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_127/release-highlights.webp"/>
+<updated>2026-07-01T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_127</id>
+<category term="release"/>
+<content type="html"> <p>Learn what is new in Visual Studio Code 1.127</p> <p><a href="https://code.visualstudio.com/updates/v1_127">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Iterating faster with TypeScript 7</title>
+<link href="https://code.visualstudio.com/blogs/2026/06/26/iterating-faster-with-ts-7"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/06/26/ts-7.png"/>
+<updated>2026-06-26T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/06/26/iterating-faster-with-ts-7</id>
+<category term="blog"/>
+<content type="html"> <p>How the VS Code and TypeScript teams collaborated to adopt TypeScript 7 and speed up VS Code development</p> <p><a href="https://code.visualstudio.com/blogs/2026/06/26/iterating-faster-with-ts-7">Read the full article</a></p> </content>
+<author>
+<name>VS Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.126</title>
+<link href="https://code.visualstudio.com/updates/v1_126"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_126/release-highlights.webp"/>
+<updated>2026-06-24T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_126</id>
+<category term="release"/>
+<content type="html"> <p>Learn what is new in Visual Studio Code 1.126</p> <p><a href="https://code.visualstudio.com/updates/v1_126">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>What 50,000 Runs of a 5-Line Eval Taught Us</title>
+<link href="https://code.visualstudio.com/blogs/2026/06/19/what-50000-runs-taught-us"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/06/19/5000-runs-social.png"/>
+<updated>2026-06-19T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/06/19/what-50000-runs-taught-us</id>
+<category term="blog"/>
+<content type="html"> <p>How AI coding models calibrate effort, token cost, and tool use on even the simplest task, and what that means for model selection and cost.</p> <p><a href="https://code.visualstudio.com/blogs/2026/06/19/what-50000-runs-taught-us">Read the full article</a></p> </content>
+<author>
+<name>Julia Kasper</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Use your own language model key in VS Code</title>
+<link href="https://code.visualstudio.com/blogs/2026/06/18/byok-vscode"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/06/18/language-models-editor.png"/>
+<updated>2026-06-18T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/06/18/byok-vscode</id>
+<category term="blog"/>
+<content type="html"> <p>Learn how to use bring your own key (BYOK) in VS Code to add models from providers like Azure, Anthropic, Gemini, OpenAI, Huggingface, OpenRouter, or use a local model with Ollama, Foundry Local, and more.</p> <p><a href="https://code.visualstudio.com/blogs/2026/06/18/byok-vscode">Read the full article</a></p> </content>
+<author>
+<name>Kayla Cinnamon</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.125</title>
+<link href="https://code.visualstudio.com/updates/v1_125"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_125/release-highlights.webp"/>
+<updated>2026-06-17T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_125</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.125</p> <p><a href="https://code.visualstudio.com/updates/v1_125">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Improving token efficiency for GitHub Copilot in VS Code</title>
+<link href="https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/06/17/cache-explorer.webp"/>
+<updated>2026-06-17T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot</id>
+<category term="blog"/>
+<content type="html"> <p>Learn how we're improving token efficiency for GitHub Copilot to reduce costs and latency for VS Code users.</p> <p><a href="https://code.visualstudio.com/blogs/2026/06/17/improving-token-efficiency-in-github-copilot">Read the full article</a></p> </content>
+<author>
+<name>Ryan Caldwell, Bhavya U</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.124</title>
+<link href="https://code.visualstudio.com/updates/v1_124"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_124/release-highlights.webp"/>
+<updated>2026-06-10T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_124</id>
+<category term="release"/>
+<content type="html"> <p>Learn what is new in Visual Studio Code 1.124</p> <p><a href="https://code.visualstudio.com/updates/v1_124">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.123</title>
+<link href="https://code.visualstudio.com/updates/v1_123"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_123/release-highlights.webp"/>
+<updated>2026-06-03T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_123</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.123</p> <p><a href="https://code.visualstudio.com/updates/v1_123">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.122</title>
+<link href="https://code.visualstudio.com/updates/v1_122"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_122/release-highlights.webp"/>
+<updated>2026-05-28T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_122</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.122</p> <p><a href="https://code.visualstudio.com/updates/v1_122">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.121</title>
+<link href="https://code.visualstudio.com/updates/v1_121"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_121/release-highlights.webp"/>
+<updated>2026-05-20T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_121</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.121</p> <p><a href="https://code.visualstudio.com/updates/v1_121">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>The Coding Harness Behind GitHub Copilot in VS Code</title>
+<link href="https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/05/15/evaluations.png"/>
+<updated>2026-05-15T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode</id>
+<category term="blog"/>
+<content type="html"> <p>Learn why the coding harness around GitHub Copilot in VS Code matters as models, tools, agents, and providers evolve.</p> <p><a href="https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode">Read the full article</a></p> </content>
+<author>
+<name>VS Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.120</title>
+<link href="https://code.visualstudio.com/updates/v1_120"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_120/release-highlights.webp"/>
+<updated>2026-05-13T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_120</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.120</p> <p><a href="https://code.visualstudio.com/updates/v1_120">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.119</title>
+<link href="https://code.visualstudio.com/updates/v1_119"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_119/release-highlights.webp"/>
+<updated>2026-05-06T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_119</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.119</p> <p><a href="https://code.visualstudio.com/updates/v1_119">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.118</title>
+<link href="https://code.visualstudio.com/updates/v1_118"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_118/release-highlights.webp"/>
+<updated>2026-04-29T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_118</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.118</p> <p><a href="https://code.visualstudio.com/updates/v1_118">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.117</title>
+<link href="https://code.visualstudio.com/updates/v1_117"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_117/release-highlights.webp"/>
+<updated>2026-04-22T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_117</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.117</p> <p><a href="https://code.visualstudio.com/updates/v1_117">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.116</title>
+<link href="https://code.visualstudio.com/updates/v1_116"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_116/release-highlights.webp"/>
+<updated>2026-04-15T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_116</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.116</p> <p><a href="https://code.visualstudio.com/updates/v1_116">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.115</title>
+<link href="https://code.visualstudio.com/updates/v1_115"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_115/release-highlights.webp"/>
+<updated>2026-04-08T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_115</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.115</p> <p><a href="https://code.visualstudio.com/updates/v1_115">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.114</title>
+<link href="https://code.visualstudio.com/updates/v1_114"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_114/release-highlights.webp"/>
+<updated>2026-04-01T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_114</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.114</p> <p><a href="https://code.visualstudio.com/updates/v1_114">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.113</title>
+<link href="https://code.visualstudio.com/updates/v1_113"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_113/release-highlights.webp"/>
+<updated>2026-03-25T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_113</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.113</p> <p><a href="https://code.visualstudio.com/updates/v1_113">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.112</title>
+<link href="https://code.visualstudio.com/updates/v1_112"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_112/release-graphic.webp"/>
+<updated>2026-03-18T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_112</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.112</p> <p><a href="https://code.visualstudio.com/updates/v1_112">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>How VS Code Builds with AI</title>
+<link href="https://code.visualstudio.com/blogs/2026/03/13/how-VS-Code-Builds-with-AI"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/03/13/weekly-releases-x.png"/>
+<updated>2026-03-13T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/03/13/how-VS-Code-Builds-with-AI</id>
+<category term="blog"/>
+<content type="html"> <p>Learn how VS Code uses AI across its own development workflow with GitHub Copilot agent mode, automated testing, and AI-powered code review.</p> <p><a href="https://code.visualstudio.com/blogs/2026/03/13/how-VS-Code-Builds-with-AI">Read the full article</a></p> </content>
+<author>
+<name>Pierce Boggan</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Visual Studio Code 1.111</title>
+<link href="https://code.visualstudio.com/updates/v1_111"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_111/release-graphic.webp"/>
+<updated>2026-03-09T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_111</id>
+<category term="release"/>
+<content type="html"> <p>Learn what's new in Visual Studio Code 1.111</p> <p><a href="https://code.visualstudio.com/updates/v1_111">Read the full article</a></p> </content>
+<author>
+<name>Visual Studio Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>Making agents practical for real-world development</title>
+<link href="https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development"/>
+<link rel="related" href="https://code.visualstudio.com/assets/blogs/2026/03/05/release-graphic.png"/>
+<updated>2026-03-05T00:00:00.000Z</updated>
+<id>https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development</id>
+<category term="blog"/>
+<content type="html"> <p>Explore agent orchestration, extensibility, and continuity in VS Code 1.110: lifecycle hooks, agent skills, session memory, and integrated browser tools.</p> <p><a href="https://code.visualstudio.com/blogs/2026/03/05/making-agents-practical-for-real-world-development">Read the full article</a></p> </content>
+<author>
+<name>VS Code Team</name>
+<uri>https://code.visualstudio.com/branding/code-stable.png</uri>
+</author>
+</entry>
+<entry>
+<title>February 2026 (version 1.110)</title>
+<link href="https://code.visualstudio.com/updates/v1_110"/>
+<link rel="related" href="https://code.visualstudio.com/assets/updates/1_110/release-highlights.webp"/>
+<updated>2026-03-04T17:00:00.000Z</updated>
+<id>https://code.visualstudio.com/updates/v1_110</id>
+<category term="release"/>
+<content type="html"> <p>What's new in the Visual Studio Code Febru
