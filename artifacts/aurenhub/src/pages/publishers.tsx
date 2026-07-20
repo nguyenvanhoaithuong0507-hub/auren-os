@@ -2,14 +2,14 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { PUBLISHERS } from "@/data/catalog";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
-const CARD2 = "#13131a";
+const BG = "#0f0f0f";
+const CARD = "#161616";
+const CARD2 = "#262626";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 export default function PublishersPage() {
   const [search, setSearch] = useState("");
@@ -22,7 +22,7 @@ export default function PublishersPage() {
 
   return (
     <div style={{ backgroundColor: BG, minHeight: "100dvh", color: TEXT }}>
-      <style>{`*{box-sizing:border-box}.pub-card:hover{border-color:rgba(0,207,171,0.25)!important;background:#13131a!important}.pub-card{transition:all 0.15s}`}</style>
+      <style>{`*{box-sizing:border-box}.pub-card:hover{border-color:rgba(0,207,171,0.25)!important;background:#262626!important}.pub-card{transition:all 0.15s}`}</style>
       <Navbar onSearch={setSearch} />
       <main style={{ padding: "24px 20px 80px", maxWidth: 720, margin: "0 auto" }}>
         <h1 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#fff", letterSpacing: "-0.03em", marginBottom: 6 }}>Publishers</h1>
