@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 
@@ -68,7 +69,8 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
+    <ViewTransition default="none" enter="fade-in">
+      <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter',system-ui,sans-serif", overflowX: "hidden" }}>
       <style>{`
         *{box-sizing:border-box}
         .proj-card:hover{border-color:rgba(0,207,171,0.28)!important;background:rgba(0,207,171,0.02)!important}
@@ -202,6 +204,7 @@ export default function ProjectsPage() {
       </div>
 
       <MobileNav active="projects" />
-    </div>
+      </div>
+    </ViewTransition>
   );
 }
