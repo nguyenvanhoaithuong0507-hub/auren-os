@@ -1,19 +1,20 @@
 import Navbar from "@/components/Navbar";
+import { AppIcon } from "@/components/AppIcon";
 import { AuRenMascot } from "@/components/AuRenMascot";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 const VALUES = [
-  { icon: "🧠", title: "AI với linh hồn", desc: "AuRen không phải chatbot. Đây là một AI có tính cách, bộ nhớ, và khả năng phát triển theo thời gian cùng bạn." },
-  { icon: "🌐", title: "Cộng đồng trước tiên", desc: "AuRenHub được xây dựng để mọi người đều có thể đóng góp — từ developer chuyên nghiệp đến người mới bắt đầu." },
-  { icon: "🔓", title: "Minh bạch & Mở", desc: "Core của AuRen là open-source. Chúng tôi tin vào việc xây dựng trong công khai và lắng nghe cộng đồng." },
-  { icon: "⚡", title: "Hiệu suất thực sự", desc: "Không có demo ma thuật. Mỗi tính năng đều được kiểm tra trong môi trường thực tế trước khi xuất hiện trong sản phẩm." },
+  { icon: "portal", title: "AI với linh hồn", desc: "AuRen không phải chatbot. Đây là một AI có tính cách, bộ nhớ, và khả năng phát triển theo thời gian cùng bạn." },
+  { icon: "globe", title: "Cộng đồng trước tiên", desc: "AuRenHub được xây dựng để mọi người đều có thể đóng góp — từ developer chuyên nghiệp đến người mới bắt đầu." },
+  { icon: "shield", title: "Minh bạch & Mở", desc: "Core của AuRen là open-source. Chúng tôi tin vào việc xây dựng trong công khai và lắng nghe cộng đồng." },
+  { icon: "skills", title: "Hiệu suất thực sự", desc: "Không có demo ma thuật. Mỗi tính năng đều được kiểm tra trong môi trường thực tế trước khi xuất hiện trong sản phẩm." },
 ];
 
 const TIMELINE = [
@@ -62,7 +63,7 @@ export default function AboutPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {VALUES.map(v => (
               <div key={v.title} style={{ background: CARD, border: `1px solid ${BORDER}`, borderRadius: 12, padding: 18 }}>
-                <div style={{ fontSize: 24, marginBottom: 10 }}>{v.icon}</div>
+                <div style={{ color: ACCENT, marginBottom: 10 }}><AppIcon name={v.icon} size={24} /></div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: TEXT, marginBottom: 6 }}>{v.title}</div>
                 <div style={{ fontSize: 11, color: MUTED, lineHeight: 1.65 }}>{v.desc}</div>
               </div>
