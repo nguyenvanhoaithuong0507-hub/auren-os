@@ -4,16 +4,17 @@ import { useUser, useClerk, useAuth } from "@clerk/react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import Navbar from "@/components/Navbar";
 import { SKILLS, PLUGINS } from "@/data/catalog";
+import { AppIcon } from "@/components/AppIcon";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
-const CARD2 = "#13131a";
+const BG = "#0f0f0f";
+const CARD = "#161616";
+const CARD2 = "#262626";
 const BORDER = "rgba(255,255,255,0.06)";
 const BORDER2 = "rgba(255,255,255,0.10)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM = "#6f6f6f";
 
 const LS_SKILLS_KEY = "aurenhub_installed_skills";
 const LS_PLUGINS_KEY = "aurenhub_installed_plugins";
@@ -121,7 +122,7 @@ export default function ProfilePage() {
   const initials = displayName.slice(0, 2).toUpperCase();
 
   return (
-    <div style={{ backgroundColor: BG, minHeight: "100dvh", color: TEXT, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div style={{ backgroundColor: BG, minHeight: "100dvh", color: TEXT, fontFamily: "'IBM Plex Sans', 'Inter', system-ui, sans-serif" }}>
       <style>{`*{box-sizing:border-box}input{outline:none}@keyframes shimmer{0%{opacity:0.4}50%{opacity:0.7}100%{opacity:0.4}}`}</style>
       <Navbar />
       <main style={{ padding: "28px 20px 60px", maxWidth: 680, margin: "0 auto" }}>
@@ -227,7 +228,7 @@ export default function ProfilePage() {
                 <div key={skill.id} className="profile-item"
                   style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 12px", backgroundColor: CARD2, border: `1px solid ${BORDER}`, borderRadius: 10, cursor: "pointer" }}
                   onClick={() => navigate(`/skills/${skill.id}`)}>
-                  <span style={{ fontSize: 20 }}>{skill.icon}</span>
+                  <AppIcon name={skill.iconName ?? "tool"} color={skill.color} size={20} />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: TEXT }}>{skill.name}</div>
                     <div style={{ fontSize: 11, color: MUTED }}>{skill.publisher}</div>
@@ -264,7 +265,7 @@ export default function ProfilePage() {
               {installedPlugins.map(plugin => (
                 <div key={plugin.id}
                   style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 12px", backgroundColor: CARD2, border: `1px solid ${BORDER}`, borderRadius: 10 }}>
-                  <span style={{ fontSize: 20 }}>{plugin.icon}</span>
+                  <AppIcon name={plugin.iconName ?? "plugins"} color={plugin.color} size={20} />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: TEXT }}>{plugin.name}</div>
                     <div style={{ fontSize: 11, color: MUTED }}>{plugin.publisher}</div>
