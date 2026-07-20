@@ -1,16 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocation } from "wouter";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
-
-const BG = "#090a10";
-const CARD = "#111521";
-const BORDER = "#1a1f2e";
-const ACCENT = "#00cfab";
-const ACCENT2 = "#00a88a";
-const TEXT = "#dce2f0";
-const MUTED = "#8892a4";
-const DIMMED = "#3a4155";
 
 const PROMPTS = [
   "SaaS Dashboard",
@@ -92,41 +84,42 @@ export default function WorkspacePage() {
   useEffect(() => () => { if (thinkRef.current) clearInterval(thinkRef.current); }, []);
 
   return (
-    <div style={{ display: "flex", minHeight: "100dvh", backgroundColor: BG, color: TEXT, fontFamily: "'Inter', system-ui, sans-serif", overflowX: "hidden" }}>
-      <style>{`
-        *{box-sizing:border-box}
-        textarea{resize:none;outline:none}
-        textarea::placeholder{color:${DIMMED}}
-        .proj-card:hover{border-color:rgba(0,207,171,0.28)!important;background:rgba(0,207,171,0.03)!important}
-        .prompt-pill:hover{border-color:rgba(0,207,171,0.4)!important;color:#e4e8f2!important}
-        .icon-btn:hover{background:rgba(255,255,255,0.06)!important}
-        @keyframes thinking-dot{0%,80%,100%{transform:scale(0.6);opacity:0.35}40%{transform:scale(1);opacity:1}}
-        @keyframes slide-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-        @keyframes scan{0%{top:0}100%{top:100%}}
-        @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-        @media(max-width:767px){.desktop-sidebar{display:none!important}}
-      `}</style>
+    <ViewTransition default="none" enter="fade-in">
+      <div className="flex min-h-screen bg-background text-foreground font-sans overflow-x-hidden">
+        <style>{`
+          *{box-sizing:border-box}
+          textarea{resize:none;outline:none}
+          textarea::placeholder{color:hsl(0, 0%, 45.1%)}
+          .proj-card:hover{border-color:rgba(0,217,255,0.28)!important;background:rgba(0,217,255,0.03)!important}
+          .prompt-pill:hover{border-color:rgba(0,217,255,0.4)!important;color:hsl(0, 0%, 3.6%)!important}
+          .icon-btn:hover{background:rgba(0,0,0,0.06)!important}
+          @keyframes thinking-dot{0%,80%,100%{transform:scale(0.6);opacity:0.35}40%{transform:scale(1);opacity:1}}
+          @keyframes slide-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+          @keyframes scan{0%{top:0}100%{top:100%}}
+          @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+          @media(max-width:767px){.desktop-sidebar{display:none!important}}
+        `}</style>
 
-      <Sidebar active="home" />
+        <Sidebar active="home" />
 
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+        <div className="flex-1 flex flex-col min-w-0">
 
-        {/* Header breadcrumb */}
-        <header style={{ padding: "0 20px", height: 48, borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", justifyContent: "space-between", flexShrink: 0, backgroundColor: "rgba(9,10,16,0.9)", backdropFilter: "blur(10px)", position: "sticky", top: 0, zIndex: 50 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13 }}>
-            <span style={{ color: MUTED }}>workspace</span>
-            <span style={{ color: DIMMED }}>/</span>
-            <span style={{ color: TEXT, fontWeight: 500 }}>build</span>
-          </div>
-          <button
-            onClick={() => handleReset()}
-            style={{ display: "flex", alignItems: "center", gap: 5, padding: "5px 12px", borderRadius: 5, border: `1px solid ${BORDER}`, backgroundColor: "rgba(255,255,255,0.04)", color: TEXT, fontSize: 12, cursor: "pointer", fontFamily: "inherit" }}>
-            <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1L7.2 4H11L8.4 6.2L9.5 9.5L6 7.5L2.5 9.5L3.6 6.2L1 4H4.8Z"/></svg>
-            New
-          </button>
-        </header>
+          {/* Header breadcrumb */}
+          <header className="px-5 h-12 border-b border-border flex items-center justify-between flex-shrink-0 bg-background/90 backdrop-blur-md sticky top-0 z-50">
+            <div className="flex items-center gap-1.5 text-sm">
+              <span className="text-muted-foreground">workspace</span>
+              <span className="text-muted">/</span>
+              <span className="text-foreground font-medium">build</span>
+            </div>
+            <button
+              onClick={() => handleReset()}
+              className="flex items-center gap-1.5 px-3 py-1 rounded border border-border bg-secondary text-foreground text-xs cursor-pointer hover:bg-muted transition-smooth">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1L7.2 4H11L8.4 6.2L9.5 9.5L6 7.5L2.5 9.5L3.6 6.2L1 4H4.8Z"/></svg>
+              New
+            </button>
+          </header>
 
-        <main style={{ flex: 1, overflowY: "auto", padding: "0 0 80px" }}>
+          <main className="flex-1 overflow-y-auto pb-20">
 
           {isThinking ? (
             /* ── THINKING STATE ── */
@@ -287,10 +280,11 @@ export default function WorkspacePage() {
 
             </div>
           )}
-        </main>
-      </div>
+          </main>
 
-      <MobileNav active="home" />
-    </div>
+          <MobileNav active="home" />
+        </div>
+      </div>
+    </ViewTransition>
   );
 }

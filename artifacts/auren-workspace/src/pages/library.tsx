@@ -1,4 +1,5 @@
 import { useState, type ReactElement } from "react";
+import { ViewTransition } from "react";
 import Sidebar from "@/components/Sidebar";
 import MobileNav from "@/components/MobileNav";
 
@@ -36,6 +37,7 @@ function LibLogo({ name, color }: { name: string; color: string }) {
   if (logo) return logo;
   const initial = name.charAt(0).toUpperCase();
   return (
+    <ViewTransition default="none" enter="fade-in">
     <div style={{ width: 22, height: 22, borderRadius: 5, backgroundColor: color + "22", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 800, color }}>
       {initial}
     </div>
@@ -137,6 +139,7 @@ const BADGE_COLORS: Record<string, { bg: string; text: string }> = {
   New:       { bg: "rgba(167,139,250,0.1)", text: "#a78bfa" },
   Rising:    { bg: "rgba(99,102,241,0.1)",  text: "#818cf8" },
   Stable:    { bg: "rgba(107,114,128,0.12)",text: "#9ca3af" },
+    </ViewTransition>
   Enterprise:{ bg: "rgba(59,130,246,0.1)",  text: "#60a5fa" },
 };
 

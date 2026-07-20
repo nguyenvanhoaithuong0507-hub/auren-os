@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const CARD2 = "#111117";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 const SECTIONS = [
   { id: "quickstart", label: "Bắt đầu nhanh" },
@@ -57,7 +57,7 @@ export default function DocsPage() {
 
   return (
     <div style={{ backgroundColor: BG, minHeight: "100dvh", color: TEXT, display: "flex", flexDirection: "column" }}>
-      <style>{`*{box-sizing:border-box}code{font-family:'DM Mono','Fira Mono',monospace}.doc-link{transition:all 0.12s;cursor:pointer}.doc-link:hover{color:#e8eaf2!important;background:rgba(255,255,255,0.04)!important}`}</style>
+      <style>{`*{box-sizing:border-box}code{font-family:'DM Mono','Fira Mono',monospace}.doc-link{transition:all 0.12s;cursor:pointer}.doc-link:hover{color:#f4f4f4!important;background:rgba(255,255,255,0.04)!important}`}</style>
       <Navbar />
 
       <div style={{ display: "flex", flex: 1 }}>
