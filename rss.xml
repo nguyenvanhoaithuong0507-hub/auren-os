@@ -1,0 +1,546 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+<title>GitHub Next</title>
+<description>A team of researchers and engineers at GitHub prototyping the tools, workflows, and ideas that will shape the future of software development.</description>
+<link>https://githubnext.com/</link>
+<item>
+<title>Can agents be proud of their work?</title>
+<link>https://githubnext.com/posts/can-agents-be-proud-of-their-work/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/can-agents-be-proud-of-their-work/</guid>
+<description>Can agents be proud of their work?</description>
+<pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Agentic Workflows Can Use Local Inference</title>
+<link>https://githubnext.com/posts/agentic-workflows-local-inference/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/agentic-workflows-local-inference/</guid>
+<description>Agentic Workflows gives you complete control to customize your Actions runtime and choose your AI model. You can deploy Agentic Workflows to a custom runner of your choosing and use any compatible AI host or model-routing platform. You can even use local inference running on your Mac!</description>
+<pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>/goooooooal!</title>
+<link>https://githubnext.com/posts/goal/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/goal/</guid>
+<description>Turn an issue into an agentic mission</description>
+<pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Crane: verified code migration</title>
+<link>https://githubnext.com/posts/crane/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/crane/</guid>
+<description>Crane is a migration assistant for GitHub repositories that plans, executes, and verifies code migrations in small agentic steps while keeping humans in control.</description>
+<pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Agentics Beyond Code</title>
+<link>https://githubnext.com/posts/chrizbo-agentics-beyond-code/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/chrizbo-agentics-beyond-code/</guid>
+<description>What happens when you give PMs, compliance teams, and leaders their own agents? A tour of Agentics Beyond Code — an open-source set of GitHub Agentic Workflows for the non-engineering roles that ship, govern, and operate products.</description>
+<pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Control what your agentic workflows see with integrity filtering</title>
+<link>https://githubnext.com/posts/integrity-filtering/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/integrity-filtering/</guid>
+<description>GitHub Agentic Workflows filter untrusted GitHub content before it reaches the agent. Here’s why integrity filtering matters for repository maintainers, and how we built it.</description>
+<pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Animating the native traffic lights in Ace</title>
+<link>https://githubnext.com/posts/micro-ace-traffic-lights/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/micro-ace-traffic-lights/</guid>
+<description>Animating the native traffic lights in Ace</description>
+<pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Agent Functions</title>
+<link>https://githubnext.com/posts/agent-functions/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/agent-functions/</guid>
+<description>Prompts are programs. You wouldn’t write a complex program completely from scratch, in a big, soupy loop without subroutines, and then write it again the next time you wanted to run it. Why let your agent work that way?</description>
+<pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>A loader with level of detail</title>
+<link>https://githubnext.com/posts/micro-ace-loader-lod/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/micro-ace-loader-lod/</guid>
+<description>A loader with level of detail</description>
+<pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Loading states that bleed outside the window</title>
+<link>https://githubnext.com/posts/micro-ace-loading-bleed/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/micro-ace-loading-bleed/</guid>
+<description>Loading states that bleed outside the window</description>
+<pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Canary: a harm gate for agentic systems</title>
+<link>https://githubnext.com/posts/canary-harm-gate-agentic-systems/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/canary-harm-gate-agentic-systems/</guid>
+<description>Canary puts a small, auditable gate in front of agentic workflows so untrusted artifacts are classified before powerful agents act on them.</description>
+<pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>The Impact of Automated Repository Maintenance Assistance</title>
+<link>https://githubnext.com/posts/dsyme-impact-automated-repo-maintenance/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-impact-automated-repo-maintenance/</guid>
+<description>The Impact of Automated Repository Maintenance Assistance</description>
+<pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Agents are power tools</title>
+<link>https://githubnext.com/posts/agents-are-power-tools/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/agents-are-power-tools/</guid>
+<description>A practical mental model for agents, workflows, and human-machine systems in agentic engineering.</description>
+<pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Agency is the New Resilience</title>
+<link>https://githubnext.com/posts/agency-is-the-new-resilience/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/agency-is-the-new-resilience/</guid>
+<description>Agents can power robust workflows by intelligently reacting to unexpected conditions, creating a new form of flexible resilience.</description>
+<pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Understanding Repositories as Human/Agent Knowledge Factories</title>
+<link>https://githubnext.com/posts/dsyme-repositories-knowledge-factories/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-repositories-knowledge-factories/</guid>
+<description>Understanding Repositories as Human/Agent Knowledge Factories</description>
+<pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Autoloop is porting pandas to TypeScript</title>
+<link>https://githubnext.com/posts/tsb/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/tsb/</guid>
+<description>tsb is a from-scratch TypeScript port of pandas, being built almost entirely by Autoloop — one iterative improvement at a time.</description>
+<pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Repo Mind Light</title>
+<link>https://githubnext.com/projects/repo-mind-light/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/repo-mind-light/</guid>
+<description>Holistic repository understanding for humans and agents.</description>
+<pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>New site, who dis?</title>
+<link>https://githubnext.com/posts/micro-new-site/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/micro-new-site/</guid>
+<description>New site, who dis?</description>
+<pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Autoloop</title>
+<link>https://githubnext.com/projects/autoloop/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/autoloop/</guid>
+<description>Automate research, development and anything else with a simple, goal-driven loop</description>
+<pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Lean Squad: Exploring Automated Software Verification with Near-Zero Human Labour</title>
+<link>https://githubnext.com/posts/dsyme-lean-squad-automated-verification/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-lean-squad-automated-verification/</guid>
+<description>Lean Squad: Exploring Automated Software Verification with Near-Zero Human Labour</description>
+<pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>One Developer, Two Dozen Agents, Zero Alignment</title>
+<link>https://githubnext.com/talks/one-developer-two-dozen-agents-zero-alignment/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/one-developer-two-dozen-agents-zero-alignment/</guid>
+<description>Why we need collaborative AI engineering tools, and a tour of Ace — a research prototype from GitHub Next that brings teammates and coding agents into one shared, multiplayer workspace.</description>
+<pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Repo Mind</title>
+<link>https://githubnext.com/projects/repo-mind/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/repo-mind/</guid>
+<description>Global codebase understanding for humans and AI agents.</description>
+<pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Start Your Day With Code That’s Better</title>
+<link>https://githubnext.com/posts/dsyme-start-your-day-with-better-code/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-start-your-day-with-better-code/</guid>
+<description>Start Your Day With Code That’s Better</description>
+<pubDate>Sun, 08 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Adding Weighted Task Selection to a GitHub Agentic Workflow</title>
+<link>https://githubnext.com/posts/dsyme-weighted-task-selection-agentic-workflow/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-weighted-task-selection-agentic-workflow/</guid>
+<description>Adding Weighted Task Selection to a GitHub Agentic Workflow</description>
+<pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Repo Assist: Crunching the Technical Debt with GitHub Agentic Workflows</title>
+<link>https://githubnext.com/posts/dsyme-repo-assist-repository-assistant/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-repo-assist-repository-assistant/</guid>
+<description>Repo Assist: Crunching the Technical Debt with GitHub Agentic Workflows</description>
+<pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Automate repository tasks with GitHub Agentic Workflows</title>
+<link>https://githubnext.com/posts/dsyme-automate-repository-tasks-agentic-workflows/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-automate-repository-tasks-agentic-workflows/</guid>
+<description>Automate repository tasks with GitHub Agentic Workflows</description>
+<pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Generative AI and Changing Inputs</title>
+<link>https://githubnext.com/posts/dsyme-generative-ai-changing-inputs/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-generative-ai-changing-inputs/</guid>
+<description>Generative AI and Changing Inputs</description>
+<pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Towards Semi-automatic Agentic Performance Engineering</title>
+<link>https://githubnext.com/posts/dsyme-semi-automatic-performance-engineering/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-semi-automatic-performance-engineering/</guid>
+<description>Towards Semi-automatic Agentic Performance Engineering</description>
+<pubDate>Sun, 12 Oct 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Intent, meet Toolchain</title>
+<link>https://githubnext.com/posts/dsyme-intent-meet-toolchain/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-intent-meet-toolchain/</guid>
+<description>Intent, meet Toolchain</description>
+<pubDate>Wed, 24 Sep 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>What Kind of Programming is Natural Language Programming?</title>
+<link>https://githubnext.com/posts/dsyme-what-kind-of-programming-is-nlp/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-what-kind-of-programming-is-nlp/</guid>
+<description>What Kind of Programming is Natural Language Programming?</description>
+<pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>On Continuous AI for Test Improvement</title>
+<link>https://githubnext.com/posts/dsyme-continuous-test-improvement/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-continuous-test-improvement/</guid>
+<description>On Continuous AI for Test Improvement</description>
+<pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>On Natural Language Programming</title>
+<link>https://githubnext.com/posts/dsyme-on-natural-language-programming/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-on-natural-language-programming/</guid>
+<description>On Natural Language Programming</description>
+<pubDate>Wed, 27 Aug 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Agentic Workflows</title>
+<link>https://githubnext.com/projects/agentic-workflows/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/agentic-workflows/</guid>
+<description>Towards Natural‑Language Programming for GitHub Actions</description>
+<pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Project Copernicus</title>
+<link>https://githubnext.com/projects/copernicus/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copernicus/</guid>
+<description>Exploring LLM-powered navigation for your codebase</description>
+<pubDate>Mon, 14 Jul 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Continuous AI</title>
+<link>https://githubnext.com/projects/continuous-ai/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/continuous-ai/</guid>
+<description>Exploring LLM-powered automation in platform-based software collaboration</description>
+<pubDate>Sat, 28 Jun 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Introducing “Continuous AI”</title>
+<link>https://githubnext.com/posts/dsyme-introducing-continuous-ai/</link>
+<guid isPermaLink="true">https://githubnext.com/posts/dsyme-introducing-continuous-ai/</guid>
+<description>Introducing “Continuous AI”</description>
+<pubDate>Thu, 19 Jun 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Discovery Agent</title>
+<link>https://githubnext.com/projects/discovery-agent/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/discovery-agent/</guid>
+<description>Agentic Setup, Build, and Testing of Repositories.</description>
+<pubDate>Sun, 04 May 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Extract, Edit, Apply</title>
+<link>https://githubnext.com/projects/extract-edit-apply/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/extract-edit-apply/</guid>
+<description>An exploration of a new category of assists for using natural language in software development.</description>
+<pubDate>Mon, 28 Apr 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Mosaic</title>
+<link>https://githubnext.com/projects/mosaic/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/mosaic/</guid>
+<description>Can we derive personalized design systems from sources of inspiration?</description>
+<pubDate>Sun, 26 Jan 2025 19:14:35 GMT</pubDate>
+</item>
+<item>
+<title>Learning Sandbox</title>
+<link>https://githubnext.com/projects/learning-sandbox/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/learning-sandbox/</guid>
+<description>Can we make it easy and fun to learn as we build? We’re exploring ways to create personalized, interactive learning environments that integrate into your daily workflow.</description>
+<pubDate>Wed, 30 Oct 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Spark</title>
+<link>https://githubnext.com/projects/github-spark/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/github-spark/</guid>
+<description>Can we enable anyone to create or adapt software for themselves, using AI and a fully-managed runtime?</description>
+<pubDate>Tue, 29 Oct 2024 08:00:01 GMT</pubDate>
+</item>
+<item>
+<title>Vitale</title>
+<link>https://githubnext.com/projects/vitale/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/vitale/</guid>
+<description>Live notebooks in VS Code for JavaScript/TypeScript, web development, and AI experimentation</description>
+<pubDate>Thu, 01 Aug 2024 08:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Bringing the power of AI into your application</title>
+<link>https://githubnext.com/talks/bringing-the-power-of-ai-into-your-application/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/bringing-the-power-of-ai-into-your-application/</guid>
+<description>A practical introduction to integrating large language models into applications, covering prompt crafting, chaining AI queries, and UX considerations for building AI-powered tools. Also addresses how to measure the impact of AI changes and evaluate whether AI integration is right for a given application.</description>
+<pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Copilot Workspace</title>
+<link>https://githubnext.com/projects/copilot-workspace/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-workspace/</guid>
+<description>An agentic dev environment, designed for everyday tasks.</description>
+<pubDate>Mon, 29 Apr 2024 10:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Monaspace</title>
+<link>https://githubnext.com/projects/monaspace/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/monaspace/</guid>
+<description>An innovative superfamily of fonts for code. How can we make code more expressive in any editor?</description>
+<pubDate>Thu, 09 Nov 2023 10:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Copilot Next Edit Suggestions</title>
+<link>https://githubnext.com/projects/copilot-next-edit-suggestions/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-next-edit-suggestions/</guid>
+<description>Can we improve Copilot code completion by suggesting the next logical change, wherever it is in your project?</description>
+<pubDate>Thu, 09 Nov 2023 08:00:01 GMT</pubDate>
+</item>
+<item>
+<title>Realtime GitHub</title>
+<link>https://githubnext.com/projects/rtgh/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/rtgh/</guid>
+<description>Multiplayer collaboration for your whole repo.</description>
+<pubDate>Thu, 09 Nov 2023 08:00:00 GMT</pubDate>
+</item>
+<item>
+<title>SpecLang</title>
+<link>https://githubnext.com/projects/speclang/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/speclang/</guid>
+<description>Can we develop software entirely in natural language, and let an AI-powered toolchain manage the implementation?</description>
+<pubDate>Thu, 09 Nov 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Code Atlas</title>
+<link>https://githubnext.com/projects/code-atlas/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/code-atlas/</guid>
+<description>How can we make LLM responses more robust and easier to understand by combining their fluid reasoning with rigid structure?</description>
+<pubDate>Wed, 28 Jun 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Designing for Intelligence</title>
+<link>https://githubnext.com/talks/designing-for-intelligence/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/designing-for-intelligence/</guid>
+<description>A look at the design and research principles behind building AI-powered products at GitHub Next, covering how to elicit context from users, structure prompts, measure result quality, and weave intelligence into product experiences. Shares practical lessons learned from prototyping and shipping tools like GitHub Copilot across the software development lifecycle.</description>
+<pubDate>Thu, 11 May 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GPT-4 with Calc</title>
+<link>https://githubnext.com/projects/gpt4-with-calc/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/gpt4-with-calc/</guid>
+<description>An exploration of using calculation generation to improve GPT-4’s capabilities for numeric reasoning.</description>
+<pubDate>Thu, 11 May 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Copilot for Docs</title>
+<link>https://githubnext.com/projects/copilot-for-docs/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-for-docs/</guid>
+<description>How would it feel to have an expert on hand at all times? We built a tool that uses relevant information from a project’s documentation to answer questions or explain concepts.</description>
+<pubDate>Wed, 22 Mar 2023 10:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Copilot for Pull Requests</title>
+<link>https://githubnext.com/projects/copilot-for-pull-requests/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-for-pull-requests/</guid>
+<description>Pull requests are a central part of the GitHub user experience. Copilot for PRs brings the power of Copilot to the PR experience, to help you write better PR descriptions, and to help your team review and merge PRs faster.</description>
+<pubDate>Wed, 22 Mar 2023 06:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Copilot Completions in the CLI</title>
+<link>https://githubnext.com/projects/copilot-completions-cli/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-completions-cli/</guid>
+<description>Ever having trouble remembering shell commands and flags for this or that? Ever wish you could just *say* what you want the shell to do? Don’t worry: we’re building GitHub Copilot assistance right into your terminal.</description>
+<pubDate>Wed, 22 Mar 2023 02:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Copilot Voice</title>
+<link>https://githubnext.com/projects/copilot-voice/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-voice/</guid>
+<description>Write code without the keyboard. Difficulty typing? Use your voice to code without spelling things out by talking with GitHub Copilot.</description>
+<pubDate>Wed, 22 Mar 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Crafting Code Suggestions using Large Language Models</title>
+<link>https://githubnext.com/talks/crafting-code-suggestions-using-large-language-models/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/crafting-code-suggestions-using-large-language-models/</guid>
+<description>An exploration of why large language models for code completion present unique engineering challenges — developers don’t write code linearly, so models must bridge the gap between predictive capability and real-world usefulness. Covers prompt engineering strategies including content reordering and codebase linearization, using GitHub Copilot as a case study.</description>
+<pubDate>Tue, 25 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Copilot and techniques for improving code suggestions from large language models</title>
+<link>https://githubnext.com/talks/github-copilot-and-techniques-for-improving-code-suggestions-from-large-language-models/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/github-copilot-and-techniques-for-improving-code-suggestions-from-large-language-models/</guid>
+<description>An examination of how to improve the performance of a given LLM on a specific task without modifying the underlying model — a more accessible area of research than training from scratch. Focuses on techniques used to enhance GitHub Copilot’s suggestions and introduces an offline evaluation framework for early-stage experimentation.</description>
+<pubDate>Thu, 12 Jan 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Code Brushes</title>
+<link>https://githubnext.com/projects/code-brushes/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/code-brushes/</guid>
+<description>Can editing code feel more tactile, like painting with Photoshop brushes? We added a toolbox of brushes to our Visual Studio Code extension that can modify your code.</description>
+<pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>A Backstage Pass with GitHub Copilot (Universe 2022)</title>
+<link>https://githubnext.com/talks/a-backstage-pass-with-github-copilot-universe-2022/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/a-backstage-pass-with-github-copilot-universe-2022/</guid>
+<description>An inside look at the research and data behind GitHub Copilot, combining live demos with survey results from GitHub engineers and academic perspectives on AI pair programming. Presents findings from a controlled study showing Copilot users completed a coding task significantly faster than those without it.</description>
+<pubDate>Mon, 21 Nov 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Blocks</title>
+<link>https://githubnext.com/projects/blocks/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/blocks/</guid>
+<description>Reimagine repositories with custom, interactive blocks. Build rich documentation, enhance your workflows, and bring your codebase to life.</description>
+<pubDate>Wed, 09 Nov 2022 08:00:00 GMT</pubDate>
+</item>
+<item>
+<title>AI-assisted pair programming with GitHub Copilot</title>
+<link>https://githubnext.com/talks/ai-assisted-pair-programming-with-github-copilot/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/ai-assisted-pair-programming-with-github-copilot/</guid>
+<description>An introduction to GitHub Copilot as an AI pair programming tool and how it integrates into developer workflows to accelerate coding. Covers how the system suggests code in context, adapts to individual projects, and what this means for the future of software development.</description>
+<pubDate>Thu, 27 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Collaborative Workspaces</title>
+<link>https://githubnext.com/projects/workspaces/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/workspaces/</guid>
+<description>As we increasingly work together remotely, how might we unify our workflows to enable remote collaboration for developers? GitHub Next explores what “working together” means, beyond multiple cursors and a shared code editor.</description>
+<pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Copilot Radar</title>
+<link>https://githubnext.com/projects/copilot-radar/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-radar/</guid>
+<description>GitHub Copilot Radar supports code navigation with a constantly updated view of _other_ code locations most relevant to the one you’re currently viewing or editing. As a jump-to-definition on steroids, it leverages both static analysis and GitHub Copilot’s neural reasoning to make sure developers get the background they need about the code they touch.</description>
+<pubDate>Thu, 13 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Copilot for *Your* Codebase</title>
+<link>https://githubnext.com/projects/copilot-view/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-view/</guid>
+<description>When editing, GitHub Copilot only knows about the contents of your current file and possibly a few other open tabs, rendering it blind to important type definitions, patterns and greater connections in your codebase. We want to let GitHub Copilot see your entire repo when it comes up with its suggestions.</description>
+<pubDate>Thu, 13 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Incremental CodeQL</title>
+<link>https://githubnext.com/projects/incremental-codeql/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/incremental-codeql/</guid>
+<description>The goal of the Incremental CodeQL project is to investigate the potential for incrementalization to improve the performance of CodeQL query evaluation. Instead of having to re-analyze the whole code base from scratch, incremental evaluation reuses the previously computed analysis results and only re-analyzes the parts of the code base that are affected by a program change. This approach can lead to significant performance speed-ups without the need to make any changes to the analysis implementation.</description>
+<pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>TestPilot</title>
+<link>https://githubnext.com/projects/testpilot/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/testpilot/</guid>
+<description>TestPilot takes the pain out of writing unit tests. It uses GitHub Copilot’s AI technology to suggest tests based on your existing code and documentation. Unlike many other tools, TestPilot generates readable tests with meaningful assertions, and it can iteratively improve its suggestions based on your feedback. </description>
+<pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Bringing the Power of AI into your Editor with GitHub Copilot</title>
+<link>https://githubnext.com/talks/bringing-the-power-of-ai-into-your-editor-with-github-copilot/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/bringing-the-power-of-ai-into-your-editor-with-github-copilot/</guid>
+<description>A technical deep dive into how GitHub Copilot works as an advanced AI autocomplete system embedded directly in the IDE, drawing on the collective knowledge of millions of developers. Covers the design principles behind Copilot, how it communicates with its AI model, and how it integrates with various code editors.</description>
+<pubDate>Thu, 16 Jun 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>How We Evaluate the Quality of Copilot</title>
+<link>https://githubnext.com/talks/how-we-evaluate-the-quality-of-copilot/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/how-we-evaluate-the-quality-of-copilot/</guid>
+<description>An overview of the methods and metrics used to assess the quality and effectiveness of GitHub Copilot’s code suggestions at scale. Covers how evaluation frameworks are designed to measure both objective output quality and developer productivity impact.</description>
+<pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>From AI for Code to AI for Coding</title>
+<link>https://githubnext.com/talks/from-ai-for-code-to-ai-for-coding/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/from-ai-for-code-to-ai-for-coding/</guid>
+<description>Large language models like OpenAI Codex have reached the capability to generate large chunks of coherent code, enabling a new class of developer tools including GitHub Copilot. Examines what work remains to transform a code-prediction model into a genuinely transformative programming assistant, and the obstacles along the way.</description>
+<pubDate>Mon, 30 May 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Productivity Assessment of Neural Code Completion</title>
+<link>https://githubnext.com/talks/productivity-assessment-of-neural-code-completion/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/productivity-assessment-of-neural-code-completion/</guid>
+<description>A study examining how neural code completion tools affect developer productivity by comparing user perceptions with objective usage metrics across a real-world user base. Finds that suggestion acceptance rate — rather than whether completions persist in the codebase over time — is the strongest driver of developers’ perceived productivity gains.</description>
+<pubDate>Mon, 13 Jun 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Bringing data into your repos using Flat Data </title>
+<link>https://githubnext.com/talks/bringing-data-into-your-repos-using-flat-data/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/bringing-data-into-your-repos-using-flat-data/</guid>
+<description>Flat Data simplifies working with datasets in git by making it easy to fetch data from anywhere on the web directly into your repositories for processing, analyzing, and versioning. Builds on “git scraping” techniques to enable new developer workflows around local datasets.</description>
+<pubDate>Thu, 07 Apr 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Copilot Labs</title>
+<link>https://githubnext.com/projects/copilot-labs/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot-labs/</guid>
+<description>A VS Code extension for experimental applications of GitHub Copilot.</description>
+<pubDate>Wed, 30 Mar 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>React Webview UI Toolkit for VS Code</title>
+<link>https://githubnext.com/projects/react-webview-ui-toolkit/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/react-webview-ui-toolkit/</guid>
+<description>An ongoing collaboration with Microsoft to bring React to their library, [Webview UI Toolkit for Visual Studio Code](https://github.com/microsoft/vscode-webview-ui-toolkit)</description>
+<pubDate>Fri, 11 Feb 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Visualizing a Codebase</title>
+<link>https://githubnext.com/projects/repo-visualization/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/repo-visualization/</guid>
+<description>How can we “fingerprint” a codebase to see its structure at a glance? Let’s explore ways to automatically visualize a GitHub repo, and how that could be useful.</description>
+<pubDate>Wed, 04 Aug 2021 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>A Tour of F# Editor Tooling</title>
+<link>https://githubnext.com/talks/a-tour-of-f-editor-training/</link>
+<guid isPermaLink="true">https://githubnext.com/talks/a-tour-of-f-editor-training/</guid>
+<description>A tour of the editor tooling ecosystem for F#, covering language server support, IDE integrations, and the developer experience across editors.</description>
+<pubDate>Tue, 03 Aug 2021 00:00:00 GMT</pubDate>
+</item>
+<item>
+<title>GitHub Copilot</title>
+<link>https://githubnext.com/projects/copilot/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/copilot/</guid>
+<description>A new way to build software</description>
+<pubDate>Tue, 29 Jun 2021 09:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Flat Data</title>
+<link>https://githubnext.com/projects/flat-data/</link>
+<guid isPermaLink="true">https://githubnext.com/projects/flat-data/</guid>
+<description>Flat explores how to make it easy to work with data in git and GitHub. It builds on the [“git scraping” approach pioneered by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/) to offer a simple pattern for bringing working datasets into your repositories and versioning them, because developing against local datasets is faster and easier than working with data over the wire.</description>
+<pubDate>Tue, 18 May 2021 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
