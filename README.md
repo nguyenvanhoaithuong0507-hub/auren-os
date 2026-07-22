@@ -1,259 +1,403 @@
-<div align="center">
+# SandboxCode # AuRen — Documentation & Knowledge Base
 
-<img src="https://img.shields.io/badge/AuRen%20OS-AI%20Agent%20Platform-00cfab?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMyAyMEwxMiAzTDIxIDIwSDE2TDEyIDEyLjVMOCAyMEgzWiIgZmlsbD0iIzAwY2ZhYiIvPjwvc3ZnPg==&logoColor=white&labelColor=0d0e14" alt="AuRen OS" />
+> **Docusaurus 3 Documentation Site**
 
-```
- █████╗ ██╗   ██╗██████╗ ███████╗███╗   ██╗    ██████╗ ███████╗
-██╔══██╗██║   ██║██╔══██╗██╔════╝████╗  ██║   ██╔═══██╗██╔════╝
-███████║██║   ██║██████╔╝█████╗  ██╔██╗ ██║   ██║   ██║███████╗
-██╔══██║██║   ██║██╔══██╗██╔══╝  ██║╚██╗██║   ██║   ██║╚════██║
-██║  ██║╚██████╔╝██║  ██║███████╗██║ ╚████║██╗╚██████╔╝███████║
-╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚══════╝
-```
-
-### 🦞 AI Agent Platform — Built by the Community
-
-[![License](https://img.shields.io/badge/License-MIT-00cfab?style=flat-square&labelColor=0d0e14)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=flat-square&labelColor=0d0e14&logo=typescript)](https://www.typescriptlang.org)
-[![Node.js](https://img.shields.io/badge/Node.js-24-339933?style=flat-square&labelColor=0d0e14&logo=nodedotjs)](https://nodejs.org)
-[![pnpm](https://img.shields.io/badge/pnpm-workspace-f69220?style=flat-square&labelColor=0d0e14&logo=pnpm)](https://pnpm.io)
-[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&labelColor=0d0e14&logo=react)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-6-646cff?style=flat-square&labelColor=0d0e14&logo=vite)](https://vitejs.dev)
-
-</div>
+A comprehensive documentation and knowledge base site built with Docusaurus 3, featuring multilingual support (Vietnamese & English) and automated deployment to GitHub Pages.
 
 ---
 
-## 🌐 Live Applications
+## 🎯 Features
 
-| App | Path | Description |
-|-----|------|-------------|
-| 🚀 **AuRen Workspace** | `/workspace/` | AI agent development IDE with chat, tools, extensions |
-| 🧩 **AuRenHub** | `/aurenhub/` | Community marketplace for skills & plugins |
-| 📊 **AI Platform Dashboard** | `/` | Analytics dashboard for AI dev platforms 2024–2026 |
-| 🎨 **AI Platforms Slides** | `/ai-platforms-slides/` | Professional slide deck on AI landscape |
-| 🔧 **Debug Loop Simulator** | `/simulator/` | Self-healing debug loop visualizer |
-| ⚡ **API Server** | `/api/` | Express 5 REST API with OpenAPI contract |
-| 🌐 **Portal** | `/aurenhub/portal` | Unified portal linking all apps |
+- **Docusaurus 3** — Modern documentation framework with React & MDX
+- **Multilingual Support** — Vietnamese (vi) and English (en) translations
+- **Dark & Light Themes** — Beautiful, modern UI with smooth theme switching
+- **Fast & SEO-Optimized** — Static site generation with excellent SEO
+- **GitHub Pages Deploy** — Automated CI/CD pipeline for deployment
+- **Code Quality Validation** — ESLint, Prettier, Markdown lint with pre-commit hooks
+- **Responsive Design** — Mobile-friendly documentation experience
 
 ---
 
-## ✨ Features
-
-<table>
-<tr>
-<td width="50%">
-
-### 🤖 AuRen Workspace
-- **AI Agent Chat** — Real-time conversation with self-improving AI
-- **Debug Loop** — Detect → Patch → Verify automation
-- **Extensions** — VSCode-style marketplace with 30+ extensions
-- **Tools Library** — 50+ tools across 6 categories
-- **Projects** — Full project management with ZIP export
-- **Authentication** — Mandatory login with GitHub/Google/Email
-
-</td>
-<td width="50%">
-
-### 🧩 AuRenHub
-- **Skills Marketplace** — 16 community-built skills
-- **Plugin Ecosystem** — 12 one-click installable plugins
-- **GitHub OAuth** — Full GitHub authentication flow
-- **Publisher Profiles** — 8 verified publishers
-- **Search & Filter** — Real-time filtering by tags & categories
-- **Portal Hub** — Unified app launcher for all AuRen tools
-
-</td>
-</tr>
-</table>
-
----
-
-## 🏗️ Architecture
-
-```
-auren-os/                           # pnpm monorepo
-├── artifacts/
-│   ├── auren-workspace/            # 🚀 Main AI workspace (React + Vite)
-│   │   ├── src/pages/              # landing, workspace, tools, library, etc.
-│   │   ├── src/components/         # Sidebar, MobileNav, AuRenMascot
-│   │   └── src/hooks/useAuth.ts    # localStorage auth system
-│   │
-│   ├── aurenhub/                   # 🧩 Skills & plugins marketplace (React + Vite)
-│   │   ├── src/pages/              # home, skills, plugins, publishers, portal
-│   │   ├── src/components/         # Navbar, Drawer
-│   │   ├── src/data/catalog.ts     # Skills & plugins data
-│   │   └── src/hooks/useAuth.ts    # GitHub OAuth auth system
-│   │
-│   ├── ai-platform-dashboard/      # 📊 Analytics dashboard (React + Vite + Recharts)
-│   ├── ai-platforms-slides/        # 🎨 Slide deck artifact
-│   ├── debug-simulator/            # 🔧 Self-healing loop visualizer
-│   ├── api-server/                 # ⚡ Express 5 REST API
-│   └── mockup-sandbox/             # 🎭 Component preview server (dev-only)
-│
-├── lib/
-│   ├── api-spec/                   # OpenAPI 3.1 contract (SSOT)
-│   ├── api-client-react/           # Generated React Query hooks
-│   ├── api-zod/                    # Generated Zod schemas
-│   └── db/                         # Drizzle ORM + PostgreSQL schema
-│
-├── scripts/                        # Utility scripts
-├── tsconfig.base.json              # Shared TypeScript config
-└── pnpm-workspace.yaml             # Workspace catalog & settings
-```
-
----
-
-## 🎨 Design System
-
-```
-Color Palette:
-  Background:  #080809 / #0d0e14   Dark near-black
-  Cards:       #0f0f12 / #16171e   Elevated surfaces
-  Accent:      #00cfab             AuRen teal (primary)
-  Text:        #e8eaf2             Primary text
-  Muted:       #8892a4             Secondary text
-
-Typography:    Inter (system-ui fallback)
-Mascot:        Custom kawaii SVG crab — rounded, big eyes, rosy cheeks
-```
-
----
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- **Node.js** 24+
-- **pnpm** 9+
-- **PostgreSQL** (auto-provisioned on Replit)
 
-> **Note for Replit users:** `.replit` is excluded from version control (it is Replit-specific platform config). When opening this repo on Replit, the platform recreates `.replit` automatically from `artifact.toml` service definitions — no manual setup needed.
+- Node.js 18.x or higher
+- npm
+- Git
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/dotcom-03/auren-os.git
-cd auren-os
+git clone https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode.git
+cd SandboxCode
 
 # Install dependencies
-pnpm install
+npm install
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your DATABASE_URL and SESSION_SECRET
+# Start local development server
+npm start
 
-# Push database schema
-pnpm --filter @workspace/db run push
+# Build for production
+npm run build
 
-# Start all services
-pnpm --filter @workspace/api-server run dev
-pnpm --filter @workspace/auren-workspace run dev
-pnpm --filter @workspace/aurenhub run dev
-```
-
-### Generate API types from spec
-
-```bash
-# After modifying lib/api-spec/openapi.yaml:
-pnpm --filter @workspace/api-spec run codegen
+# Serve production build locally
+npm run serve
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 📋 Project Structure
 
-| Layer | Technology |
-|-------|-----------|
-| **Runtime** | Node.js 24, TypeScript 5.9 |
-| **Package Manager** | pnpm workspaces (monorepo) |
-| **Frontend** | React 19, Vite 6, Wouter, Framer Motion |
-| **Styling** | Tailwind CSS v4 + inline styles |
-| **API** | Express 5, OpenAPI 3.1 (contract-first) |
-| **Database** | PostgreSQL + Drizzle ORM |
-| **Validation** | Zod v4 + drizzle-zod |
-| **Code Generation** | Orval (React Query hooks + Zod schemas) |
-| **Build** | esbuild (API), Vite (frontends) |
-| **Logging** | Pino + pino-http |
+```
+SandboxCode/
+├── .github/
+│   ├── workflows/
+│   │   ├── deploy.yml           # GitHub Pages deployment (Docusaurus)
+│   │   ├── node.js.yml          # Node.js CI/CD pipeline
+│   │   └── codeql.yml           # Code quality analysis
+│   └── dependabot.yml           # Dependency updates
+├── docs/
+│   ├── intro.md                 # Introduction documentation
+│   └── ...                      # Additional docs
+├── src/
+│   ├── pages/
+│   │   ├── index.js             # Homepage component
+│   │   └── dashboard.js         # Dashboard page
+│   └── css/
+│       └── custom.css           # Custom Docusaurus styles
+├── public/
+│   ├── main.js                  # Frontend interactivity
+│   └── ...                      # Static assets
+├── docusaurus.config.js         # Docusaurus configuration
+├── sidebars.js                  # Documentation sidebar structure
+├── package.json                 # Dependencies & scripts
+├── .gitignore                   # Git ignore rules
+├── LICENSE                      # GNU AGPL v3
+└── README.md                    # This file
+```
 
 ---
 
-## 📁 Key Commands
+## 🏗️ Build & Deployment
+
+This project uses a modern CI/CD pipeline for automated deployment:
+
+1. **Push to main** — Changes trigger GitHub Actions workflow
+2. **Build** — Node.js environment builds Docusaurus static site
+3. **Deploy** — Built artifacts deploy to GitHub Pages (gh-pages branch)
+4. **Live** — Site available at https://nguyenvanhoaithuong0507-hub.github.io/SandboxCode/
+
+**GitHub Pages Configuration**: Ensure your repository settings have GitHub Pages source set to "GitHub Actions"
+
+---
+
+## 🛠️ Development
+
+### Available Scripts
 
 ```bash
-# Development
-pnpm --filter @workspace/auren-workspace run dev      # Workspace (port 20860)
-pnpm --filter @workspace/aurenhub run dev             # AuRenHub (port 19113)
-pnpm --filter @workspace/api-server run dev           # API (port 5000)
+# Install dependencies
+npm install
 
-# Quality
-pnpm run typecheck                                    # Full typecheck
-pnpm run build                                        # Build all packages
+# Start local dev server (with hot reload)
+npm start
 
-# Database
-pnpm --filter @workspace/db run push                  # Push schema changes
+# Build static site
+npm run build
 
-# API
-pnpm --filter @workspace/api-spec run codegen         # Regenerate API types
+# Serve production build locally
+npm run serve
+
+# Clear Docusaurus cache
+npm run clear
 ```
+
+### Code Quality & Validation
+
+```bash
+# ESLint - Check JavaScript/JSX code
+npm run lint           # Check for errors
+npm run lint:fix       # Auto-fix issues
+
+# Prettier - Format code consistently
+npm run format         # Format all files
+npm run format:check   # Check formatting without changes
+
+# Markdown Lint - Check documentation
+npm run lint:md        # Check markdown files
+npm run lint:md:fix    # Fix markdown issues
+
+# Run full validation
+npm run validate       # lint + lint:md + format:check + build
+```
+
+### Docusaurus Commands
+
+- `npm run docusaurus` — Run Docusaurus CLI commands
+- `npm run swizzle` — Customize Docusaurus components
+- `npm run write-translations` — Extract translatable strings
+- `npm run write-heading-ids` — Generate heading IDs
+
+### CI/CD Workflow
+
+The project includes GitHub Actions workflows:
+
+- **deploy.yml** — Builds and deploys to GitHub Pages on every push to `main`
+- **node.js.yml** — Validates code quality (ESLint, Prettier, Markdown lint) and builds across Node.js 18.x, 20.x, 22.x
+- **codeql.yml** — Code security analysis
+
+### Git Hooks (Pre-commit & Pre-push)
+
+Automatic validation when committing/pushing:
+
+**Pre-commit Hook:**
+
+- Runs lint-staged on changed files
+- Auto-fixes ESLint/Prettier issues
+- Blocks commit if validation fails
+
+**Pre-push Hook:**
+
+- Runs full build: `npm run build`
+- Validates no broken links (onBrokenLinks: 'throw')
+- Prevents push if build fails
+
+If hooks fail:
+
+```bash
+npm run lint:fix && npm run format  # Fix issues
+git add .                           # Re-stage files
+git commit -m "message"             # Commit again
+```
+
+---
+
+## 📦 Frontend Components
+
+### HTML Structure (`public/index.html`)
+
+- Responsive dark-themed landing page
+- Semantic HTML5 sections
+- Mobile-friendly drawer navigation
+- Accessibility features (aria-labels, focus states)
+
+### Styling (`public/style.css`)
+
+- Design system with CSS custom properties
+- Mobile-first responsive design
+- Dark theme (OLED-friendly)
+- Smooth animations and transitions
+
+### Interactivity (`public/main.js`)
+
+- Mobile menu toggle
+- Blog tab switching
+- Newsletter form validation
+- Scroll animations with Intersection Observer
+- Smooth anchor link scrolling
+
+---
+
+## 🎨 Design System
+
+### Color Palette
+
+```css
+--bg: #0a0b0d /* Primary background */ --bg-raise: #0f1216 /* Elevated surfaces */
+  --bg-card: #0d0f13 /* Card backgrounds */ --line: #1e242b /* Borders, dividers */ --blue: #3b82f6
+  /* Primary accent */ --blue-brt: #60a5fa /* Bright accent */ --green: #22c55e /* Success state */
+  --text: #e9edf1 /* Primary text */ --text-dim: #8a929c /* Secondary text */ --text-faint: #4b525b
+  /* Tertiary text */;
+```
+
+### Typography
+
+- Font Family: JetBrains Mono, SFMono, ui-monospace, Consolas
+- Sizes: 11px–4rem (clamp responsive)
+- Line Height: 1.55 default, 1.75 for readability
+
+### Spacing
+
+- Grid: 28px × 28px background pattern
+- Padding: 12px–56px (section-based)
+- Gap: 10px–26px (component-based)
+
+---
+
+## 🌍 Internationalization (i18n)
+
+This documentation supports multiple languages:
+
+- **Vietnamese (vi)** — Default language
+- **English (en)** — Secondary language
+
+Language switching is available in the site header. Add new languages in `docusaurus.config.js`:
+
+```js
+i18n: {
+  defaultLocale: 'vi',
+  locales: ['vi', 'en'],
+}
+```
+
+---
+
+## 📱 Responsive Design
+
+Docusaurus provides built-in responsive layouts:
+
+- **Mobile** — Single column, touch-friendly navigation
+- **Tablet** — Optimized for medium screens (640px–1024px)
+- **Desktop** — Full layout with sidebar (1024px+)
+
+---
+
+## 🔐 Security
+
+- **License**: GNU AGPL v3 — Ensures code sharing for network services
+- **Sandbox Isolation**: No access to production systems
+- **Environment Variables**: Use `.env` (included in `.gitignore`)
+- **Input Validation**: Client-side form validation, server-side enforcement required
+
+---
+
+## 📖 Documentation Content
+
+Documentation is stored in the `docs/` directory as Markdown files.
+
+### Creating New Pages
+
+1. Create a `.md` file in `docs/` directory
+2. Add frontmatter metadata:
+   ```md
+   ---
+   sidebar_position: 1
+   title: Page Title
+   description: Page description for SEO
+   ---
+   ```
+3. Update `sidebars.js` to add the new page to navigation
+
+### Supported Content
+
+- Markdown with MDX support
+- Code blocks with syntax highlighting
+- Interactive components
+- Math equations (LaTeX)
+- Admonitions (notes, warnings, etc.)
+
+---
+
+## 🚀 Deployment
+
+### Local Build Verification
+
+Before pushing, verify the build works locally:
+
+```bash
+npm run build
+```
+
+If the build fails with broken link errors, check:
+
+- All internal links use correct paths
+- No missing files referenced in markdown
+- All relative links are correct
+
+### GitHub Pages Setup
+
+**Manual Step (Required once)**:
+
+1. Go to your repository settings
+2. Navigate to **Pages** section
+3. Set **Build and deployment** source to **GitHub Actions**
+4. Save the changes
+
+After this, the `deploy.yml` workflow will automatically deploy on every push to `main`.
+
+### Viewing Deployed Site
+
+- **Production URL**: https://nguyenvanhoaithuong0507-hub.github.io/SandboxCode/
+- **Deployment Status**: Check GitHub Actions tab for workflow status
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Here's how to get started:
+We welcome contributions! Please:
 
-1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feat/your-skill-name`
-3. **Build** your skill or plugin following the AuRenHub spec
-4. **Submit** a pull request with a clear description
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
-### Building a Skill
+### Coding Standards
 
-Skills are self-contained modules that extend AuRen's capabilities:
-
-```typescript
-// Example skill structure
-export const mySkill = {
-  name: "My Awesome Skill",
-  version: "1.0.0",
-  description: "What this skill does",
-  tags: ["automation", "productivity"],
-  run: async (input: string) => {
-    // Your skill logic here
-    return { result: "Done!" };
-  }
-};
-```
-
----
-
-## 📊 Project Stats
-
-```
-Languages:     TypeScript 94% · CSS 4% · Other 2%
-Artifacts:     7 (5 web apps + 1 API + 1 sandbox)
-Total Pages:   25+
-Components:    50+
-API Endpoints: 15+
-```
+- Follow existing code style
+- Write meaningful commit messages
+- Include tests for new features
+- Update documentation as needed
 
 ---
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+This project is licensed under the **GNU AGPL v3** �� see [LICENSE](./LICENSE) file for details.
+
+The AGPL v3 requires that if you modify and run this software on a network server, you must provide access to the modified source code to all users. This ensures the community benefits from improvements.
 
 ---
 
-<div align="center">
+## 🌐 Links
 
-**Built with 🦞 by the AuRen OS community**
+- **GitHub**: [github.com/nguyenvanhoaithuong0507-hub/SandboxCode](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode)
+- **Issues**: [Report bugs or request features](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues)
+- **Discussions**: [Community conversations](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions)
 
-[![Portal](https://img.shields.io/badge/Portal-All%20Apps-00cfab?style=for-the-badge&labelColor=0d0e14)](https://04e39574-267a-4b0c-ac60-41c28b84a950-00-3nkcqof30z1w2-squc36sb.sisko.replit.dev/aurenhub/portal)
-[![Workspace](https://img.shields.io/badge/Workspace-Open-00cfab?style=flat-square&labelColor=0d0e14)](https://04e39574-267a-4b0c-ac60-41c28b84a950-00-3nkcqof30z1w2-squc36sb.sisko.replit.dev/workspace/)
-[![Hub](https://img.shields.io/badge/AuRenHub-Explore-818cf8?style=flat-square&labelColor=0d0e14)](https://04e39574-267a-4b0c-ac60-41c28b84a950-00-3nkcqof30z1w2-squc36sb.sisko.replit.dev/aurenhub/)
+---
 
-*AuRen OS is not affiliated with Anthropic.*
+## 📞 Support
 
-</div>
+For questions or issues:
+
+1. Check existing [GitHub Issues](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues)
+2. Start a [Discussion](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions)
+3. Review [Documentation](./README.md)
+
+---
+
+## 📝 License
+
+This project is licensed under the **GNU AGPL v3** — see [LICENSE](./LICENSE) file for details.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Test locally (`npm run build`)
+5. Commit (`git commit -m 'Add feature'`)
+6. Push and open a Pull Request
+
+---
+
+## 📞 Support
+
+For issues or questions:
+
+- Check [GitHub Issues](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/issues)
+- Start a [Discussion](https://github.com/nguyenvanhoaithuong0507-hub/SandboxCode/discussions)
+
+**Status**: Active Development  
+**Last Updated**: July 18, 2026
+
+---
+
+© 2026 SandboxCode. All rights reserved.
