@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 
-const BG = "#080809";
-const CARD = "#0f0f12";
+const BG = "#0f0f0f";
+const CARD = "#161616";
 const BORDER = "rgba(255,255,255,0.06)";
-const ACCENT = "#00cfab";
-const TEXT = "#e8eaf2";
-const MUTED = "#8892a4";
-const DIM2 = "#3a4155";
+const ACCENT = "#0f62fe";
+const TEXT = "#f4f4f4";
+const MUTED = "#a8a8a8";
+const DIM2 = "#6f6f6f";
 
 const POSTS = [
   {
